@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     description: "Explore the latest in technology at the Tech Trade Show 2024. Join industry leaders, discover new innovations, and more.",
     images: "https://iili.io/dOszAF9.png",
   },
+  icons: "https://iili.io/dOszAF9.png",
   // canonical: "https://www.techtradeshow2024.com",
   // additionalMetaTags: [
   //   {
