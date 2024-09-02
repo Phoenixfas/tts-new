@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   description: "Join us for the Tech Trade Show 2024, where the latest innovations in technology and cutting-edge products are showcased. Connect with industry leaders, attend insightful presentations, and explore new tech solutions.",
   keywords: "Tech Trade Show, technology conference, tech innovations, industry leaders, tech products, technology expo",
   authors: [{ name: "Tech Trade Show Team" }],
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     title: "Tech Trade Show 2024",
