@@ -27,17 +27,9 @@ export default function Hero() {
             {hero.map((item, index) => (
                 <div key={index} className="mySlides opacity-0 transition-opacity ease-in-out duration-[2s]">
                     <Image src={item.image} alt={item.title} layout="fill" objectFit="cover" />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#1A144B55]"></div>
-                    <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-5">
-                        <h1 className="text-white text-4xl font-semibold">{item.title}</h1>
-                        <h2 className="text-white text-2xl font-semibold">{item.subtitle}</h2>
-                        <div className="flex gap-5">
-                            <button className="px-5 py-2 bg-white text-[#1A144B] font-semibold rounded-md">{item.cta}</button>
-                            <button className="px-5 py-2 bg-white text-[#1A144B] font-semibold rounded-md">{item.cta2}</button>
-                        </div>
-                    </div>
                 </div>
             ))}
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(#000000_0%,_#00000088_15%,_#00000088_85%,_#000000_100%)]"></div>
         </div>
     )
 }

@@ -1,10 +1,12 @@
 import Image from "next/image";
-import Hero from "./Hero";
+import Bg from "./Bg";
+import HeroContent from "./HeroContent";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-[150vh] relative">
-      <Hero />
+    <div className="w-full min-h-[250vh] relative">
+      <Bg />
+      <HeroContent />
     </div>
   );
 }
