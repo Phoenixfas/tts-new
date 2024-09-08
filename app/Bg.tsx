@@ -32,7 +32,7 @@ export default function Bg() {
             <Hero />
         </div>
         <div className="bgs opacity-0 transition-opacity ease-in-out duration-[1s]">
-            <Image src="https://picsum.photos/1920/1080" alt="BG" layout="fill" objectFit="cover" />
+            <Image className="brightness-[.25]" src="/images/hero/event-bg.jpg" alt="BG" layout="fill" objectFit="cover" />
         </div>
     </div>
   )
