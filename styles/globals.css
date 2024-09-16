@@ -28,3 +28,16 @@ a {
 .active {
   opacity: 1;
 }
+
+#scroller {
+  animation: scroll 20s infinite linear;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

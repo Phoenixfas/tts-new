@@ -3,6 +3,9 @@ import Bg from "./Bg";
 import HeroContent from "./HeroContent";
 import VideoSection from "./VideoSection";
 import CardsSection from "./CardsSection";
+import MovingText from "./MovingText";
+import Media from "./Media";
+import Sponsors from "./Sponsors";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <HeroContent />
       <VideoSection />
       <CardsSection />
+      <MovingText />
+      <Media />
+      <Sponsors />
     </div>
   );
 }
