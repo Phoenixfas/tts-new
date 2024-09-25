@@ -17,7 +17,7 @@ export default function Footer() {
     <div className='relative w-full bg-[#050752] text-white px-28 py-16 flex flex-col'>
         <div className="w-full flex justify-between mb-32">
           <div className="w-[200px] h-[200px]">
-            <Image src={'/logo2.svg'} alt='logo' width={200} height={200} />
+            <Image src={'/logo_white.svg'} alt='logo' width={200} height={200} />
           </div>
 
           <div className="flex gap-20">
