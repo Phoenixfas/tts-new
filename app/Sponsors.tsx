@@ -6,10 +6,10 @@ export default function Sponsors() {
   return (
     <div className='relative w-full px-12 pt-28'>
         <div className="w-full flex flex-col gap-10 px-8 mb-12">
-            <h3 className='text-[#78e0f4] text-5xl max-w-[1100px]'>We are proud to have worked with some of the most outstanding organizations to turn their events into epic tech experiences.</h3>
-            <Link href={"/"} className='group relative w-fit px-5 py-2 border-2 border-[#78e0f4] rounded-full bg-[#78e0f4] overflow-hidden'>
-                <div className="absolute top-full group-hover:top-0 duration-300 left-0 w-full h-full bg-[#050752]"></div>
-                <p className='relative text-lg text-[#050752] group-hover:text-[#78e0f4] duration-300'>Lets make it happen</p>
+            <h3 className='text-white text-5xl max-w-[1100px]'>We are proud to have worked with some of the most outstanding organizations to turn their events into epic tech experiences.</h3>
+            <Link href={"/"} className='group relative w-fit px-5 py-2 border border-[#78e0f4] rounded-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] overflow-hidden'>
+                <div className="absolute top-full group-hover:top-0 duration-300 left-0 w-full h-full bg-[#78e0f4]"></div>
+                <p className='relative text-lg text-white group-hover:text-[#050752] duration-300'>Lets make it happen</p>
             </Link>
         </div>
         <div className="w-full overflow-hidden">

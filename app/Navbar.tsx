@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <div className={`fixed top-0 left-0 z-[99999999] w-full ${isScrolled ? "h-[70px] py-3" : "h-[100px] py-5"} duration-300 flex justify-between gap-10 items-center px-20`}>
-        <div className={`absolute ${isScrolled ? "top-0" : "-top-full"} duration-300 left-0 w-full h-full bg-[linear-gradient(to_top,_#050752,_#4EAEE5)]`}></div>
+        <div className={`absolute ${isScrolled ? "top-0" : "-top-full"} duration-300 left-0 w-full h-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)]`}></div>
         <Link href={"/"} className="relative w-[100px] h-full">
             <Image className="w-full h-full object-contain" src="/logo_white.svg" alt="logo" width={100} height={70} />
         </Link>

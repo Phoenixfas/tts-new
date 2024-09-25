@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   return (
-    <div className='relative w-full bg-[#050752] text-white px-28 py-16 flex flex-col'>
+    <div className='relative w-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white px-28 py-16 flex flex-col'>
         <div className="w-full flex justify-between mb-32">
           <div className="w-[200px] h-[200px]">
             <Image src={'/logo_white.svg'} alt='logo' width={200} height={200} />
@@ -59,7 +59,7 @@ export default function Footer() {
             <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
             <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
             <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <button className='w-fit px-10 py-3 rounded-full border-2 border-[#4EAEE5] bg-[#4EAEE5] text-[#050752] hover:bg-[#78e0f4] duration-300' type='submit' onClick={handleSubmit}>Subscribe</button>
+            <button className='w-fit px-10 py-3 rounded-full border-2 border-[#78e0f4] bg-[#78e0f4] hover:bg-transparent text-[#050752] hover:text-[#78e0f4] duration-300' type='submit' onClick={handleSubmit}>Subscribe</button>
           </form>
         </div>
         <div className="w-full border-t border-[#78e0f4] py-5 text-center text-sm">

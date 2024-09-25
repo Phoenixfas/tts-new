@@ -48,7 +48,7 @@ export default function MovingText() {
 
   return (
     <div id="target" className='relative my-10 w-full flex items-center justify-center overflow-x-hidden'>
-        <h1 id="moving-text" className='text-[#78e0f4] text-[14em] font-bold text-nowrap uppercase ease-in-out'>Tech Trade Show in the media</h1>
+        <h1 id="moving-text" className='text-white text-[14em] font-bold text-nowrap uppercase ease-in-out'>Tech Trade Show in the media</h1>
     </div>
   )
 }
