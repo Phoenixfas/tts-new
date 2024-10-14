@@ -22,22 +22,21 @@ export default function Footer() {
 
           <div className="flex gap-20">
             <div className="flex flex-col gap-3">
-              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Events</h3>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>All Events</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Conferences</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Corporate Events</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Product Launches</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Fundraisers / Galas</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Tech Expos</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Virtual & Hybrid Events</Link>
+              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Target Sectors</h3>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Agri Tech</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Fintech</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Health Tech</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Artificial Intelligence</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Cyber Security</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>E-Commerce</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Smart City</Link>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Talent</h3>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>All Talent</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Innovators</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Speakers</Link>
+              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Explore</h3>
               <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Exhibitors</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Startups</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Media Partners</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Speakers</Link>
+              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Blogs</Link>
             </div>
             <div className="flex flex-col gap-3">
               <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Company</h3>
