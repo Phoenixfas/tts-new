@@ -1,81 +1,113 @@
 const speakers = [
     {
         id: "1",
-        name: "John Doe",
-        title: "CEO",
-        image: "https://picsum.photos/200/200",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
+        image: '/images/speakers/andrea.jpg',
+        name: 'John Doe',
+        title: 'CEO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, velit nec tincidunt tincidunt, magna turpis tincidunt justo, nec volutpat purus felis nec purus. Nullam vel eros nec turpis tincidunt tincidunt. Nullam vel eros nec turpis tincidunt tincidunt.'
     },
     {
         id: "2",
-        name: "Jane Smith",
-        title: "CTO",
-        image: "https://picsum.photos/200/201",
-        description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        image: '/images/speakers/christina.jpg',
+        name: 'Jane Doe',
+        title: 'CTO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum cumque. Rem ab sunt odit, suscipit aliquam quis harum minus. Repudiandae voluptatum suscipit animi quaerat porro voluptatem dolorem cumque quo delectus dolor neque, expedita quidem possimus accusamus reiciendis, tempore facere.'
     },
     {
         id: "3",
-        name: "Alice Johnson",
-        title: "Chief Marketing Officer",
-        image: "https://picsum.photos/200/202",
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+        image: '/images/speakers/emmy.jpg',
+        name: 'John Smith',
+        title: 'CFO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae optio nesciunt totam, recusandae provident quo animi saepe sit aperiam voluptas error officiis velit quidem? Fuga ullam sint, similique debitis accusamus perferendis recusandae, at minus nam hic earum odit reprehenderit? Explicabo!'
     },
     {
         id: "4",
-        name: "Bob Brown",
-        title: "Lead Developer",
-        image: "https://picsum.photos/200/203",
-        description: "Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+        image: '/images/speakers/jemal.jpg',
+        name: 'Jane Smith',
+        title: 'COO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque quo minus voluptates accusantium neque eveniet quaerat nemo animi molestiae obcaecati exercitationem eos vel ea dolor consequuntur reiciendis quibusdam quisquam, fuga adipisci soluta optio rem. Quaerat dignissimos cumque provident distinctio.'
     },
     {
         id: "5",
-        name: "Emma Wilson",
-        title: "Head of Sales",
-        image: "https://picsum.photos/200/204",
-        description: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta."
+        image: '/images/speakers/kaone.jpg',
+        name: 'John Doe',
+        title: 'CEO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque quod beatae labore laborum consequatur saepe cum accusamus. Ipsam reprehenderit enim perferendis laudantium, eligendi perspiciatis vero repellat placeat dolores delectus animi eaque saepe hic earum maxime praesentium quod sit quidem?'
     },
     {
         id: "6",
-        name: "Michael Lee",
-        title: "Product Manager",
-        image: "https://picsum.photos/200/205",
-        description: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus."
+        image: '/images/speakers/thyrone.jpg',
+        name: 'Jane Doe',
+        title: 'CTO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quos, voluptate. Quam, quos. Quasi, quae. Quisquam, quod. Quos, voluptate. Quam, quos. Quasi, quae.'
     },
     {
         id: "7",
-        name: "Sophia Martinez",
-        title: "UX Designer",
-        image: "https://picsum.photos/200/206",
-        description: "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt."
+        image: '/images/speakers/andrea.jpg',
+        name: 'John Doe',
+        title: 'CEO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas quos natus aperiam nesciunt animi vel officiis, laudantium, culpa, dolorum qui necessitatibus iste consequatur atque odio ullam. Obcaecati accusamus similique natus, quod ab minus in doloremque, voluptatem laudantium nisi mollitia.'
+
     },
     {
         id: "8",
-        name: "James Davis",
-        title: "Financial Analyst",
-        image: "https://picsum.photos/200/207",
-        description: "Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        image: '/images/speakers/christina.jpg',
+        name: 'Jane Doe',
+        title: 'CTO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut sint, ad voluptas exercitationem minus eius omnis sunt autem, ipsum quidem numquam provident adipisci cumque ipsam optio dolor quod est dolorem amet! Facere, consectetur accusamus molestias natus quos obcaecati doloribus soluta.'
     },
     {
         id: "9",
-        name: "Olivia Taylor",
-        title: "Operations Manager",
-        image: "https://picsum.photos/200/208",
-        description: "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat."
+        image: '/images/speakers/emmy.jpg',
+        name: 'John Smith',
+        title: 'CFO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nulla fugit, dolores at mollitia soluta rem suscipit ipsam eveniet quae aspernatur itaque aliquid obcaecati fuga cupiditate culpa molestias dolore temporibus! Dolores, nemo? Fugit adipisci assumenda, cum reprehenderit suscipit sapiente harum.'
     },
     {
         id: "10",
-        name: "Ethan Anderson",
-        title: "Business Analyst",
-        image: "https://picsum.photos/200/209",
-        description: "Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem."
+        image: '/images/speakers/jemal.jpg',
+        name: 'Jane Smith',
+        title: 'COO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam deserunt consequuntur quibusdam nisi omnis sit rerum. Beatae similique ducimus laborum tempore distinctio, totam impedit. Veritatis nostrum explicabo sapiente, architecto similique libero itaque error quia debitis veniam cum consequatur sunt.'
     },
     {
         id: "11",
-        name: "Isabella Thomas",
-        title: "HR Director",
-        image: "https://picsum.photos/200/210",
-        description: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-    }
-];
+        image: '/images/speakers/kaone.jpg',
+        name: 'John Doe',
+        title: 'CEO',
+        company: 'Company Name',
+        type: 'speaker',
+        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sint aspernatur nihil debitis nesciunt ipsam accusamus voluptates quidem, nisi nobis voluptate exercitationem nam enim vitae quisquam. Explicabo sit, facilis repellat eaque id quasi. Voluptatum impedit sunt earum, officia dolor labore.'
+    },
+    {
+        id: "12",
+        image: '/images/speakers/thyrone.jpg',
+        name: 'Jane Doe',
+        title: 'CTO',
+        company: 'Company Name',
+        type: 'panelist',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo temporibus, sit officia velit cum, cupiditate repellat excepturi eum nobis laudantium sint officiis beatae unde dolore mollitia aperiam odit porro. Perspiciatis aliquid voluptas dolore minus ex reiciendis architecto. Voluptas, illum.'
+    },
+]
 
 export default speakers;

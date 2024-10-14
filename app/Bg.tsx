@@ -10,12 +10,14 @@ export default function Bg() {
         const bgs = document.getElementsByClassName("bgs")
 
         const handleScroll = () => {
-            if (window.scrollY > window.innerHeight) {
-                bgs[0].classList.remove("active")
-                bgs[1].classList.add("active")
-            } else {
-                bgs[0].classList.add("active")
-                bgs[1].classList.remove("active")
+            if (bgs) {
+                if (window.scrollY > window.innerHeight) {
+                    bgs[0].classList.remove("active")
+                    bgs[1].classList.add("active")
+                } else {
+                    bgs[0].classList.add("active")
+                    bgs[1].classList.remove("active")
+                }
             }
         }
 

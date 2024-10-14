@@ -11,14 +11,14 @@ export default function VideoSection() {
     <div className='relative w-full p-10'>
         <div className="w-full bg-[linear-gradient(#050752_50%,_transparent_80%)] flex flex-col gap-10 p-16">
             <div className="w-full flex gap-16 text-white">
-                <h2 className='text-[5.5rem] leading-[5.5rem] font-bold uppercase'>Innovation Technology Speaking Exhibitions</h2>
+                <h2 className='text-[5.5rem] leading-[5.5rem] font-bold uppercase'>Demos Networking Keynotes Exhibitions</h2>
                 <div className="flex flex-col gap-5">
                     <div className="flex flex-col gap-5">
                         <div className="w-full h-5 bg-white"></div>
                         <div className="w-full h-5 bg-white"></div>
                         <div className="w-full h-5 bg-white"></div>
                     </div>
-                    <p className='text-4xl'>We are the talent liaisons that represent clients to acquire world-class tech experts and innovators for any event. We have the expertise and capability to bring top tech personalities to your private or corporate event.</p>
+                    <p className='text-4xl'>we bring together innovators and industry leaders to showcase the latest in technology. Our event offers live demos, keynotes, and networking to shape the future of tech.</p>
                 </div>
             </div>
             <div className="relative w-full h-[550px] bg-[#78e0f4]">

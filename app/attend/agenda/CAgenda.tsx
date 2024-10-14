@@ -21,7 +21,7 @@ export default function CAgenda() {
     }
 
     return (
-        <div className="w-full px-20">
+        <div className="w-full px-20 pb-10">
             <div className="w-full flex flex-col gap-5">
 
                 {agendas.map((agenda, index) => (

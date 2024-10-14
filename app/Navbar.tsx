@@ -32,10 +32,10 @@ export default function Navbar() {
             <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
                 <span>Exhibit</span>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Exhibit</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Book a Stand</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become a Sponsor</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibition profile</Link>
+                    <Link href={"/exhibit/why-exhibit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Exhibit</Link>
+                    <Link href={"/exhibit/book-a-stand"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Book a Stand</Link>
+                    <Link href={"/exhibit/become-sponsor"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become a Sponsor</Link>
+                    <Link href={"/exhibit/profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibition profile</Link>
                     <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Floor Plan</Link>
                 </div>
             </div>
@@ -43,10 +43,10 @@ export default function Navbar() {
                 <span>Attend</span>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
                     <Link href={"/attend/agenda"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Conference Agenda</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Speakers</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibitor list</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Visit</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Visitor Profile</Link>
+                    <Link href={"/attend/speakers"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Speakers</Link>
+                    <Link href={"/attend/exhibitor-list"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibitor list</Link>
+                    <Link href={"/attend/why-visit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Visit</Link>
+                    <Link href={"/attend/visitor-profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Visitor Profile</Link>
                 </div>
             </div>
             <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
@@ -59,13 +59,13 @@ export default function Navbar() {
             <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
                 <span>Media</span>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Blogs</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link>
-                    <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link>
+                    <Link href={"/media/blogs"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Blogs</Link>
+                    {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link> */}
+                    {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link> */}
                 </div>
             </div>
-            <Link href={"/"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">Book a Stand</Link>
-            <Link href={"/"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">Register</Link>
+            <Link href={"/exhibit/book-a-stand"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">Book a Stand</Link>
+            <Link href={"/register"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">Register</Link>
         </div>
     </div>
   )
