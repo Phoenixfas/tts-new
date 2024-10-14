@@ -41,3 +41,29 @@ a {
     transform: translateX(-50%);
   }
 }
+
+.flip-box {
+  perspective: 2000px;
+}
+.flip-box-inner{
+  transition: all .6s ease-in-out;
+  transform-style: preserve-3d;
+}
+.flip-box-inner:hover{
+  transform: rotateY(-180deg);
+}
+.flip-box-front h3{
+  transform: translateZ(100px);
+}
+.flip-box-back p{
+  transform: translateZ(100px);
+}
+.flip-box-front, .flip-box-back{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.flip-box-back{
+  transform: rotateY(180deg);
+  
+}

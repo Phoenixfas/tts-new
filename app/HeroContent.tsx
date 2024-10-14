@@ -15,7 +15,7 @@ export default function HeroContent() {
             <Link href={"/"} className="py-2 px-5 rounded-full text-[#fff] hover:text-[#050752] hover:bg-[#78e0f4] duration-300">Blogs</Link>
         </div>
         <div className="flex flex-col gap-5">
-            <h3 className='text-xl text-white'>RECENTLY SPEAKERS</h3>
+            <h3 className='text-xl text-white'>RECENT SPEAKERS</h3>
             <div className="w-full flex items-center gap-16 overflow-hidden">
                 {speakers.map((speaker, idx) => (
                     <div key={idx} className="flex items-center gap-5 min-w-fit">

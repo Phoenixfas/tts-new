@@ -7,6 +7,7 @@ import MovingText from "./MovingText";
 import Media from "./Media";
 import Sponsors from "./Sponsors";
 import Blogs from "./Blogs";
+import TargetSectors from "./TargetSectors";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <CardsSection />
       <MovingText />
       <Media />
+      <TargetSectors />
       <Sponsors />
       <Blogs />
     </div>
