@@ -93,7 +93,7 @@ export default function RegisterVisitor() {
             <h1 style={{fontSize: "3rem"}}>Register to Visit</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
             <br />
-            <form onSubmit={onSubmit}>
+            <form>
                 <div className={style.formInput}>
                     <label htmlFor="title">Title*</label>
                     <select name="title" id="title" aria-placeholder='(Required)' required value={title} onChange={(e) => setTitle(e.target.value)}>
