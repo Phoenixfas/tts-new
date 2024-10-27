@@ -1,19 +1,31 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
+  const [isActive, setIsActive] = useState(false)
+  const pathname = usePathname()
+  const p = pathname.split('/')[1] || ''
+
+  useEffect(() => {
+    if (p === 'dashboard') {
+      setIsActive(false)
+    } else {
+      setIsActive(true)
+    }
+  }, [p])
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
     console.log({ firstName, lastName, email })
   }
 
-  return (
+  if (isActive) return (
     <div className='relative w-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white px-28 py-16 flex flex-col'>
         <div className="w-full flex justify-between mb-32">
           <div className="w-[200px] h-[200px]">
