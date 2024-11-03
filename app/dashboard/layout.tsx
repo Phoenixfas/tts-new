@@ -15,7 +15,7 @@ export default function RootLayout({
 
 
   const client = new ApolloClient({
-    uri: "https://api.afriopia.com/graphql",
+    uri: "/graphql",
     // uri: "http://localhost:5000/graphql",
     cache: new InMemoryCache({
       typePolicies: {

@@ -19,7 +19,7 @@ export default function Auth({children} : Props) {
 
   useEffect(() => {
     const getMe = async () => {
-      fetch('https://dashboard.afriopia.com/api/administrator/me', {
+      fetch('/api/administrator/me', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,6 +28,7 @@ export default function Auth({children} : Props) {
         })
         .then(res => {
             if(res.status === 200) {
+                console.log(res.json())
                 setNotExpired(true)
             } else {
                 setNotExpired(false)

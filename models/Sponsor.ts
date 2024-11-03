@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const sponsorSchema = new Schema({
@@ -62,4 +62,5 @@ const sponsorSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('Sponsor', sponsorSchema);
+const Sponsor = mongoose.models.Sponsor || mongoose.model('Sponsor', sponsorSchema);
+export default Sponsor;

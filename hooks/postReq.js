@@ -9,7 +9,7 @@ const usePost = async (url, body, token) => {
     }
 
     try {
-        const res = await fetch(`https://dashboard.afriopia.com/api/${url}`, config);
+        const res = await fetch(`/api/${url}`, config);
         const json = await res.json();
         // const data = json.data;
         return json;

@@ -25,7 +25,7 @@ export default function RegSearch({path} : any) {
             }
         }
         const fetchData = async () => {
-            const res = await fetch(`https://dashboard.afriopia.com/api/${path}`, config)
+            const res = await fetch(`/api/${path}`, config)
             const data = await res.json()
             setData(data?.data.filter((d: any) => d.approved === true))
         }

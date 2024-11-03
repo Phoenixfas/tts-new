@@ -26,7 +26,7 @@ export default function RegistererPaginator({path}: any) {
             }
         }
         const fetchData = async () => {
-            const res = await fetch(`https://dashboard.afriopia.com/api/exhibitors`, config)
+            const res = await fetch(`/api/exhibitors`, config)
             if (!res.ok) {
                 setError('Error fetching data')
                 setLoading(false)

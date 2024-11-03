@@ -18,7 +18,7 @@ const useFetch = (url: any) => {
             'Authorization': `Bearer ${token}`
           }
         };
-        const res = await fetch(`https://dashboard.afriopia.com/api/${url}`, config);
+        const res = await fetch(`/api/${url}`, config);
         const json = await res.json();
         setData(json.data);
         setLoading(false);

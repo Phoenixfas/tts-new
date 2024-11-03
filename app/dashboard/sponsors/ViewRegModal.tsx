@@ -25,7 +25,7 @@ export default function ViewRegModal({path}: any) {
 
   
     const approveReg = async (data: any) => {
-        const res = await fetch(`https://dashboard.afriopia.com/api/${path}/${data._id}/approve`, {
+        const res = await fetch(`/api/${path}/${data._id}/approve`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export default function ViewRegModal({path}: any) {
     }
 
     const changeType = async (data: any) => {
-        const res = await fetch(`https://dashboard.afriopia.com/api/${path}/${data._id}`, {
+        const res = await fetch(`/api/${path}/${data._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

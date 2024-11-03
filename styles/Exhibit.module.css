@@ -419,10 +419,10 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    background: linear-gradient(to bottom right, #AED6D5 10%, #45B1BE 70%);
+    background: linear-gradient(to top right, #78E0F4, #4EAEE5, #050752);
 }
 .success a{
-    color: #AED6D5;
+    color: #050752;
 }
 .success__socials{
     display: flex;

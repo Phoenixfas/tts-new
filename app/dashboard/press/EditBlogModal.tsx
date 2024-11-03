@@ -45,7 +45,7 @@ export default function EditBlogModal() {
         const img: any = document.getElementById("image").files[0]
         const imgData = new FormData()
         imgData.append('file', img)
-        imgData.append('upload_preset', 'amec24')
+        imgData.append('upload_preset', 'afriopia')
 
         if(img === undefined) {
             await addArticle({

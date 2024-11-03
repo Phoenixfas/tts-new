@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const speakerSchema = new Schema({
@@ -16,4 +16,5 @@ const speakerSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('Speaker', speakerSchema);
+const Speaker = mongoose.models.Speaker || mongoose.model('Speaker', speakerSchema);
+export default Speaker;

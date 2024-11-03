@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const pressSchema = new Schema({
@@ -24,4 +24,5 @@ const pressSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Press', pressSchema);
+const Press = mongoose.models.Press || mongoose.model('Press', pressSchema);
+export default Press;

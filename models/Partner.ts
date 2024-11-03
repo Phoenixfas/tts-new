@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const partnerSchema = new Schema({
@@ -10,4 +10,5 @@ const partnerSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('Partner', partnerSchema);
+const Partner = mongoose.models.Partner || mongoose.model('Partner', partnerSchema);
+export default Partner;
