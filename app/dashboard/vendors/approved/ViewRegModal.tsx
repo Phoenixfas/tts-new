@@ -129,7 +129,7 @@ export default function ViewRegModal({path}: any) {
                   approveReg(regData)
                 }} ><FaRegCheckCircle /> APPROVE Vendor</button>}
 
-                <Link href={`/vendors/${regData._id}`} className="px-5 py-2 bg-orange-500 text-lg font-light w-fit self-end mt-10 cursor-pointer text-white rounded-md flex items-center gap-3" >Update Exhibitor</Link>
+                <Link href={`/dashboard/vendors/${regData._id}`} className="px-5 py-2 bg-orange-500 text-lg font-light w-fit self-end mt-10 cursor-pointer text-white rounded-md flex items-center gap-3" >Update Exhibitor</Link>
                 
                 {/* <button className="px-5 py-2 bg-red-500 text-lg font-light w-fit self-end mt-10 cursor-pointer text-white rounded-md flex items-center gap-3" onClick={() => {
                   deleteReg(regData._id)
