@@ -1,48 +1,44 @@
 const whyexhibit = [
     {
         id: "1",
-        title: "Perfect Platform",
+        title: "Enhance Brand Visibility",
         description: `
-        <p>AMEC provides an ideal platform to showcase your expertise and establish yourself as a leader in your field, boosting your confidence.
-        </p>
         <p>
-        This not only fosters confidence in your current clientele but also attracts potential new clients seeking a dependable and knowledgeable industry frontrunner.
+            Participation in the Tech Trade Show (TTS) offers a significant opportunity to enhance brand visibility within the competitive technology landscape. With thousands of industry professionals, decision-makers, and innovators convening in one location, your brand will receive unparalleled exposure to potential clients and partners. This event provides a platform to showcase your products and services to an engaged audience eager to explore the latest advancements in technology.
         </p>
         `,
-        image: "https://picsum.photos/1280/720"
+        image: "/images/whyexhibit/brand-visibility.png"
     },
     {
         id: "2",
-        title: "Access to Key Decision-Makers",
+        title: "Connect with Key Decision-Makers",
         description: `
         <p>
-        AMEC offers an excellent opportunity to interact with key decision-makers, including government officials, hospital administrators, and procurement professionals, who can influence healthcare procurement in the region.
-        </p>
-        <p>
+            The TTS brings together a diverse array of industry stakeholders, ranging from startups to well-established corporations. As an exhibitor, you will have the unique opportunity to connect directly with key decision-makers, influencers, and thought leaders. Establishing meaningful relationships at this event can lead to valuable partnerships, collaborations, and new business opportunities.
         </p>
         `,
-        image: "https://picsum.photos/1280/721"
+        image: "/images/whyexhibit/connecting-decision-makers.png"
     },
     {
         id: "3",
-        title: "Unrivaled Networking Opportunities",
+        title: "Showcase Innovations and Expertise",
         description: `
         <p>
-        AMEC brings together professionals, stakeholders, and potential partners from the healthcare industry. It provides an excellent platform to network and establish valuable business connections.
+            Exhibiting at TTS allows you to present your latest innovations and exhibit your expertise in a direct manner. Whether you are launching a new product, unveiling advanced technology, or sharing insights regarding industry trends, this platform serves as an excellent venue for your brand to shine. Engage visitors through live demonstrations, interactive displays, and informative presentations that underscore your brand’s value and thought leadership.
         </p>
         `,
-        image: "https://picsum.photos/1280/722"
+        image: "/images/whyexhibit/innovations.png"
     },
-    // {
-    //     id: "4",
-    //     title: "Demonstrating Commitment",
-    //     description: `
-    //     <p>
-    //     Your presence at the African Medical Exhibition and Conference sends a powerful message – that you are committed to the African healthcare ecosystem. This commitment is a sign of stability and reliability, traits that are highly valued by clients and partners
-    //     </p>
-    //     `,
-    //     image: "https://picsum.photos/1280/720"
-    // },
+    {
+        id: "4",
+        title: "Generate Quality Leads",
+        description: `
+        <p>
+            The Tech Trade Show attracts a targeted audience actively seeking solutions to their technology-related challenges. By participating, you will position your brand as a trusted provider within the industry, facilitating the generation of quality leads that can significantly influence business growth. Capture attendee information through engaging booth activities and follow up after the event to convert these leads into loyal customers.
+        </p>
+        `,
+        image: "/images/whyexhibit/lead.png"
+    },
     // {
     //     id: "5",
     //     title: "Areas for Investment",
@@ -68,37 +64,47 @@ const whyexhibit = [
     //             </p></li>
     //     </ul>
     //     `,
-    //     image: "https://picsum.photos/1280/720"
+    //     image: "/images/whyexhibit/"
     // },
     {
         id: "6",
-        title: "Business Development",
+        title: "Stay Ahead of the Competition",
         description: `
         <p>
-        Participating in AMEC can lead to potential business partnerships, distribution agreements, and collaboration opportunities with local companies, healthcare providers, and government entities.
+            In the rapidly evolving field of technology, it is imperative to stay ahead of the competition. By participating in TTS, you will obtain insights into market trends, emerging technologies, and competitor strategies. Attendance at keynote sessions, panel discussions, and networking events will enable you to remain informed and adapt your business strategies accordingly.
         </p>
         `,
-        image: "https://picsum.photos/1280/723"
+        image: "/images/whyexhibit/competition.png"
     },
     {
         id: "7",
-        title: "Product Promotion and Launch",
+        title: "Enhance Your Marketing Strategy",
         description: `
         <p>
-        Launching a new healthcare product or service at AMEC can generate substantial attention and interest. It's an ideal platform for product promotion and demonstrations.
+            Exhibiting at TTS goes beyond mere presence; it involves the creation of a comprehensive marketing strategy. Leverage your participation to amplify both online and offline marketing efforts. Promote your involvement through social media, engage with media coverage, and produce post-event content to maximize your investment and outreach.
         </p>
         `,
-        image: "https://picsum.photos/1280/724"
+        image: "/images/whyexhibit/marketing.png"
     },
     {
         id: "8",
-        title: "Regulatory and Compliance Information",
+        title: "Join a Community of Innovators",
         description: `
         <p>
-        AMEC features presentations and discussions on local regulations and compliance standards. This knowledge is crucial for navigating the regulatory landscape in African countries.
+            By exhibiting at TTS, you will become part of a vibrant community of innovators and technology enthusiasts. Engage in collaboration, learning, and growth alongside other industry leaders who share your passion for technology. Benefit from networking opportunities, knowledge exchange, and a supportive environment that fosters both collaboration and growth.
         </p>
         `,
-        image: "https://picsum.photos/1280/725"
+        image: "/images/whyexhibit/innovators.png"
+    },
+    {
+        id: "9",
+        title: "Secure Your Spot Today",
+        description: `
+        <p>
+            Do not miss the opportunity to position your brand at the forefront of the technology sector. Join us at the Tech Trade Show and experience the advantages of exhibiting firsthand. Secure your spot today and participate in an event that will shape the future of technology.
+        </p>
+        `,
+        image: "/images/whyexhibit/spot.png"
     },
 
 ]
