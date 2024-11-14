@@ -92,21 +92,18 @@ export async function POST(request: NextRequest) {
                     `
         };
 
-        mailTransporter.sendMail(mailDetails, function(err, data) {
-            if(err) {
-                console.log('Error Occurs', err);
-                return NextResponse.json({
-                    success: false,
-                    message: "Error Occured While sending email"
-                }, { status: 400 });
+        mailTransporter.sendMail(mailDetails, function (err, data) {
+            if (err) {
+                console.log('Error Occurs');
             } else {
-                return NextResponse.json({
-                    success: true,
-                    data: exhibitor,
-                }, { status: 200 });
-                // console.log('Email sent successfully');
+                console.log('Email sent successfully');
             }
         });
+        
+        return NextResponse.json({
+            success: true,
+            data: exhibitor
+        }, { status: 200 });
     } catch (error) {
         return NextResponse.json({
             success: false,

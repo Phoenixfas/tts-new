@@ -59,7 +59,7 @@ export default function ViewRegModal({path}: any) {
     }
 
     const deleteReg = async (id: any) => {
-        const res = await fetch(`https://api.afriopia.com/${path}/${id}`, {
+        const res = await fetch(`/${path}/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export default function ViewRegModal({path}: any) {
       }
       if(json.secure_url !== "") {
           const image = json.secure_url
-          const res = await fetch(`https://dashboard.afriopia.com/api/${path}/${reg._id}`, {
+          const res = await fetch(`/api/${path}/${reg._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

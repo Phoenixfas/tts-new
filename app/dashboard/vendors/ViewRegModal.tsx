@@ -8,6 +8,7 @@ import { FaTrash, FaRegCheckCircle } from 'react-icons/fa'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const variants = {
   open: { opacity: 1 },
@@ -65,7 +66,7 @@ export default function ViewRegModal({path}: any) {
                   <GrClose />
                 </div>
                 <div className=' w-full'>
-
+                  {regData.logo && regData.logo !== "" && <Image src={regData.logo} alt={regData.first_name} width={400} height={400} className="rounded-2xl mt-5 mb-10 w-52 object-contain h-auto" />}
                   <div className='flex  flex-wrap gap-1 mb-4 flex-col'>
                     <div className='text-xl font-bold text-black'>First Name</div>
                     <div className='text-xl font-light text-black '>{regData.first_name.charAt(0).toUpperCase() + regData.first_name.slice(1)}</div>

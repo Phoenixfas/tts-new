@@ -7,6 +7,7 @@ import { CgCloseO } from 'react-icons/cg'
 import { FaTrash, FaRegCheckCircle } from 'react-icons/fa'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 const variants = {
   open: { opacity: 1 },
@@ -15,6 +16,7 @@ const variants = {
 
 
 export default function ViewRegModal({path}: any) {
+    const router = useRouter()
     const dispatch = useAppDispatch()
     const regModalToggle = useAppSelector(state => state.regModalToggle.value)
     const regData = useAppSelector(state => state.activeVendor)
@@ -37,7 +39,7 @@ export default function ViewRegModal({path}: any) {
         })
         const dataRes = await res.json()
         dispatch(toggleRegModal())
-        window.location.reload()
+        router.push('/dashboard/sponsors/approved')
     }
 
     const changeType = async (data: any) => {

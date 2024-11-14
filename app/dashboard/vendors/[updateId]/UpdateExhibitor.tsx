@@ -6,8 +6,10 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import { FaRegCheckCircle } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
 
 export default function UpdateExhibitor({ exhibitorId }: { exhibitorId: any }) {
+  const router = useRouter()
   const { data, error, loading } = useFetch(`exhibitors/${exhibitorId}`)
 
   const [description, setDescription] = useState("")
@@ -63,6 +65,7 @@ export default function UpdateExhibitor({ exhibitorId }: { exhibitorId: any }) {
             logo: image
           })
         })
+        router.push('/dashboard/vendors')
         // window.location.reload()
     }
   }

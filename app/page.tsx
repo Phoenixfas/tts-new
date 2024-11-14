@@ -8,11 +8,13 @@ import Media from "./Media";
 import Sponsors from "./Sponsors";
 import Blogs from "./Blogs";
 import TargetSectors from "./TargetSectors";
+import ParticlesBg from "@/components/ParticlesBg";
 
 export default function Home() {
   return (
     <div className="w-full min-h-[100vh] relative">
       <Bg />
+      <ParticlesBg color="#78e0f4" amount={100} />
       <HeroContent />
       <VideoSection />
       <CardsSection />

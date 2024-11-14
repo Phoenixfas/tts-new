@@ -1,5 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import blogModalToggleReducer from "./blogModalToggleSlice";
+import blogModalToggleReducer from "./cliBlogModalToggleSlice";
 import blogAddModalToggleReducer from "./blogAddModalToggleSlice";
 import activeBlogReducer from "./activeBlogSlice";
 import sortBlogsReducer from "./sortBlogsSlice";
@@ -16,6 +16,9 @@ import activeRegReducer from "./activeRegSlice";
 import activeVendorReducer from "./activeVendorSlice";
 import regModalToggleReducer from "./regModalToggleSlice";
 import activeSpeakerReducer from "./activeSpeakerSlice";
+import cliblogModalToggleReducer from "./cliBlogModalToggleSlice";
+import activeExhibitorReducer from "./activeExhibitorSlice";
+import activeProfileReducer from "./activeProfileSlice";
 
 export const rootReducer = combineReducers({
   blogModalToggle: blogModalToggleReducer,
@@ -35,6 +38,9 @@ export const rootReducer = combineReducers({
   activeVendor: activeVendorReducer,
   regModalToggle: regModalToggleReducer,
   activeSpeaker: activeSpeakerReducer,
+  cliblogModalToggle: cliblogModalToggleReducer,
+  activeExhibitor: activeExhibitorReducer,
+  activeProfile: activeProfileReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

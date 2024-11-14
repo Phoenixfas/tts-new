@@ -52,7 +52,7 @@ export default function BecomeSponsor() {
             }
             
 
-            const res = await fetch('https://dashboard.afriopia.com/api/sponsors', config);
+            const res = await fetch('/api/sponsors', config);
             const data = await res.json();
             if (res.status === 400) {
                 setError(data.error);
@@ -92,7 +92,7 @@ export default function BecomeSponsor() {
         <div className={style.bookingForm}>
             <h1 style={{fontSize: "3rem"}}>Become a Sponsor at AMEC</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
-            <form >
+            <form onSubmit={onSubmit}>
                 <div className={style.formInput}>
                     <label htmlFor="first_name">First Name*</label>
                     <input type="text" name="first_name" id="first_name" placeholder='(Required)' required value={first_name} onChange={(e) => setFirstName(e.target.value)} />

@@ -18,7 +18,7 @@ export default function Sidebar() {
 
     useEffect(() => {
         switch (pathname.split('/')[2]) {
-            case '':
+            case undefined:
                 setActive('dashboard')
                 break
             case 'blog':
@@ -57,7 +57,7 @@ export default function Sidebar() {
         </div>
 
         <div className='h-28 w-full flex items-start justify-center pt-5'>
-            <Image className='duration-300' src='/logo_white.svg' width={isOpen ? 100 : 50} height={isOpen ? 100 : 50} alt="Logo" priority/>
+            <Image className={`${isOpen ? "w-[100px] h-[100px]" : "w-[50px] h-[50px]"} object-contain duration-300`} src='/logo_white.svg' width={200} height={200} alt="Logo" priority/>
         </div>
 
         <div className='flex flex-col  gap-1 w-full p-4'>

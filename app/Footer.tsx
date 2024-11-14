@@ -3,11 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import postReq from '../hooks/postReq'
 
 export default function Footer() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
   const [isActive, setIsActive] = useState(false)
   const pathname = usePathname()
   const p = pathname.split('/')[1] || ''
@@ -20,10 +22,29 @@ export default function Footer() {
     }
   }, [p])
 
-  const handleSubmit = (e: any) => {
+  const subscribe = async (e: any) => {
     e.preventDefault()
-    console.log({ firstName, lastName, email })
-  }
+    setMsg("Please wait...")
+    if (email === "") {
+        setMsg("Please enter your email address")
+        return
+    }
+
+    try {
+        const res = await postReq('subscribers', {email})
+        if (res.success) {
+            setMsg("Subscribed successfully")
+            setEmail('')
+            return
+        } else {
+            setMsg("An error occured, please try again")
+            return
+        }
+    } catch (error) {
+        console.log(error)
+        setMsg("An error occured, please try again")
+    }
+}
 
   if (isActive) return (
     <div className='relative w-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white px-28 py-16 flex flex-col'>
@@ -66,11 +87,12 @@ export default function Footer() {
 
         <div className="w-full flex flex-col mb-20">
           <p className='max-w-[600px] mb-5 text-lg'>We respond lightning fast, so do not hesitate to reach out and discuss ideas for your next event.</p>
-          <form className='w-full flex gap-3'>
-            <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-            <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          {msg !== "" && <p style={{color: "#fff", backgroundColor: "orange", padding: "5px 10px", width: "fit-content", borderRadius: "5px", marginBottom: "10px"}}>{msg}</p>}
+          <form className='w-full flex gap-3' onSubmit={subscribe}>
+            {/* <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} /> */}
+            {/* <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} /> */}
             <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <button className='w-fit px-10 py-3 rounded-full border-2 border-[#78e0f4] bg-[#78e0f4] hover:bg-transparent text-[#050752] hover:text-[#78e0f4] duration-300' type='submit' onClick={handleSubmit}>Subscribe</button>
+            <button className='w-fit px-10 py-3 rounded-full border-2 border-[#78e0f4] bg-[#78e0f4] hover:bg-transparent text-[#050752] hover:text-[#78e0f4] duration-300' type='submit' >Subscribe</button>
           </form>
         </div>
         <div className="w-full border-t border-[#78e0f4] py-5 text-center text-sm">

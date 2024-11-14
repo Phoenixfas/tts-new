@@ -41,7 +41,7 @@ export default function BookAStand() {
         }; 
      
         const response = await fetch( 
-          "https://dashboard.afriopia.com/api/payment/init", 
+          "/api/payment/init", 
           { 
             method: "POST", 
             headers: headers, 
@@ -91,7 +91,7 @@ export default function BookAStand() {
             }
             
 
-            const res = await fetch('https://dashboard.afriopia.com/api/exhibitors', config);
+            const res = await fetch('/api/exhibitors', config);
             const data = await res.json();
             if (res.status === 400) {
                 setError(data.error);
@@ -123,7 +123,7 @@ export default function BookAStand() {
         <div className={style.bookingForm}>
             <h1 style={{fontSize: "3rem"}}>Book A Stand</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
-            <form >
+            <form onSubmit={onSubmit}>
                 <div className={style.formInput}>
                     <label htmlFor="title">Title*</label>
                     <select name="title" id="title" aria-placeholder='(Required)' required value={title} onChange={(e) => setTitle(e.target.value)}>

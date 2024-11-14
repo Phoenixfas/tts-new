@@ -11,7 +11,7 @@ const initialState: BlogModalToggleState = {
   value: false,
 };
 
-export const blogModalToggleSlice = createSlice({
+export const cliblogModalToggleSlice = createSlice({
   name: "blogModalToggle",
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
@@ -22,10 +22,10 @@ export const blogModalToggleSlice = createSlice({
   },
 });
 
-export const { toggleBlogModal } = blogModalToggleSlice.actions;
+export const { toggleBlogModal } = cliblogModalToggleSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectBlogModalToggle = (state: RootState) =>
   state.blogModalToggle.value;
 
-export default blogModalToggleSlice.reducer;
+export default cliblogModalToggleSlice.reducer;

@@ -38,8 +38,8 @@ export async function POST(request: NextRequest) {
     
     try {    
         await dbConnect();
-        const { email } = await request.json();
         const body = await request.json();
+        const { email } = body;
         
         const visitor = await Visitor.findOne({ email });
 
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
         }
 
         const newVisitor = await Visitor.create(body);
-        // const qrCodeImage = await QRCode.toFile("qr-code.png", newVisitor.id, { version: 10, errorCorrectionLevel: 'H', width: 600, margin: 2 });
+        const qrCodeImage = await QRCode.toFile("qr-code.png", newVisitor.id, { version: 10, errorCorrectionLevel: 'H', width: 600, margin: 2 });
 
         let mailDetails = {
             from: '"Afriopia" <afriopiacom@gmail.com>', // sender address
@@ -124,22 +124,21 @@ export async function POST(request: NextRequest) {
                     `
         };
 
-        mailTransporter.sendMail(mailDetails, function(err, data) {
-            if(err) {
-                console.log('Error Occurs', err);
-                return NextResponse.json({
-                    success: false,
-                    message: "Error Occured While sending email"
-                }, { status: 400 });
+
+        mailTransporter.sendMail(mailDetails, function (err, data) {
+            if (err) {
+                console.log('Error Occurs');
             } else {
-                return NextResponse.json({
-                    success: true,
-                    data: newVisitor,
-                    qr: fs.readFileSync("qr-code.png", { encoding: "base64" })
-                }, { status: 200 });
-                // console.log('Email sent successfully');
+                console.log('Email sent successfully');
+                fs.unlinkSync("qr-code.png");
             }
         });
+        
+        return NextResponse.json({
+            success: true,
+            data: newVisitor,
+            qr: fs.readFileSync("qr-code.png", { encoding: "base64" })
+        }, { status: 200 });
     } catch (error) {
         return NextResponse.json({
             success: false,

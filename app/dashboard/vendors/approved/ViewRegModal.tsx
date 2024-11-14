@@ -8,6 +8,7 @@ import { FaTrash, FaRegCheckCircle } from 'react-icons/fa'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const variants = {
   open: { opacity: 1 },
@@ -16,6 +17,7 @@ const variants = {
 
 
 export default function ViewRegModal({path}: any) {
+    const router = useRouter()
     const dispatch = useAppDispatch()
     const regModalToggle = useAppSelector(state => state.regModalToggle.value)
     const regData = useAppSelector(state => state.activeVendor)
@@ -37,7 +39,7 @@ export default function ViewRegModal({path}: any) {
         })
         const dataRes = await res.json()
         dispatch(toggleRegModal())
-        window.location.reload()
+        router.push('/dashboard/vendors/approved')
     }
 
     const deleteReg = async (id: any) => {

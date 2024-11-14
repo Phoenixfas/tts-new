@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ProviderWrapper from "./ProviderWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tech Trade Show",
@@ -44,11 +45,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <ProviderWrapper>
+        <body>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </ProviderWrapper>
     </html>
   );
 }

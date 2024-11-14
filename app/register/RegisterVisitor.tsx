@@ -48,10 +48,10 @@ export default function RegisterVisitor() {
             }
             
 
-            const res = await fetch('https://dashboard.afriopia.com/api/visitors', config);
+            const res = await fetch('/api/visitors', config);
             const data = await res.json();
             if (res.status === 400) {
-                setError(data.error);
+                setError(data.message);
                 return;
             }
             // if (data.capacity === 'full') {
@@ -93,7 +93,7 @@ export default function RegisterVisitor() {
             <h1 style={{fontSize: "3rem"}}>Register to Visit</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
             <br />
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className={style.formInput}>
                     <label htmlFor="title">Title*</label>
                     <select name="title" id="title" aria-placeholder='(Required)' required value={title} onChange={(e) => setTitle(e.target.value)}>

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
-import { toggleBlogModal } from '../../../redux/slices/blogModalToggleSlice'
+import { toggleBlogModal } from '../../../redux/slices/cliBlogModalToggleSlice'
 import { changeActiveBlog } from '../../../redux/slices/activeBlogSlice'
 
 interface BlogCardProps {

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 import { useAppDispatch } from '../../../redux/hooks';
-import { toggleBlogModal } from '../../../redux/slices/blogModalToggleSlice';
+import { toggleBlogModal } from '../../../redux/slices/cliBlogModalToggleSlice';
 import { changeActiveBlog } from '../../../redux/slices/activeBlogSlice';
 import { IoSearchOutline } from 'react-icons/io5'
 import useFetch from '../../../hooks/useFetch';

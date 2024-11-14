@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 import dbConnect from "@/lib/db";
 import Exhibitor from "@/models/Exhibitor";
 
-export async function GET( req: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT( req: NextRequest, { params }: { params: { id: string } }) {
     const id = params.id || "";
     try {
         await dbConnect();

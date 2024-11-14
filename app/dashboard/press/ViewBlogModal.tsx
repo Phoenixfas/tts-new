@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useAppSelector, useAppDispatch } from '../../../redux/hooks'
-import { toggleBlogModal } from '../../../redux/slices/blogModalToggleSlice'
+import { toggleBlogModal } from '../../../redux/slices/cliBlogModalToggleSlice'
 import { GrClose } from 'react-icons/gr'
 import { FaTrash } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
