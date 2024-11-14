@@ -33,10 +33,10 @@ export default function ViewExhibitor() {
     }
 
     return (
-        <div className="w-full py-40 flex flex-col items-center bg-gradient-to-br from-[#050752] to-[#4EAEE5]">
+        <div className="w-full py-40 px-5 flex flex-col items-center bg-gradient-to-br from-[#050752] to-[#4EAEE5]">
             {exhibitor &&    
                 <div className="w-full max-w-[800px] flex flex-col gap-5 border border-white rounded-lg p-5">
-                    <div className="flex items-center gap-10">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-10">
                         <Image className="w-[150px] h-[150px] object-cover rounded-md" src={exhibitor.logo} alt={exhibitor.company_name} width={500} height={300} />
                         <div className="flex flex-col gap-3">
                             <h1 className="text-3xl font-bold text-white">{exhibitor.company_name}</h1>
@@ -55,7 +55,7 @@ export default function ViewExhibitor() {
                         <h2 className="text-xl font-semibold">About {exhibitor.company_name}</h2>
                         <p className="text-lg font-light mb-3">{exhibitor.description}</p>
                         <h2 className="text-xl font-semibold">Products</h2>
-                        <div className="flex gap-5 mb-3">
+                        <div className="flex flex-wrap gap-5 mb-3">
                             {exhibitor.products.map((product: any, index: number) => (
                                 <Image key={index} src={product.image} alt={product.name} className="w-[100px] h-[100px] object-cover rounded-md" width={300} height={300} />
                             ))}

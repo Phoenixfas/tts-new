@@ -47,35 +47,34 @@ export default function Footer() {
 }
 
   if (isActive) return (
-    <div className='relative w-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white px-28 py-16 flex flex-col'>
-        <div className="w-full flex justify-between mb-32">
+    <div className='relative w-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white px-10 md:px-28 py-16 flex flex-col'>
+        <div className="w-full flex flex-wrap gap-10 justify-between mb-32">
           <div className="w-[200px] h-[200px]">
             <Image src={'/logo_white.svg'} alt='logo' width={200} height={200} />
           </div>
 
-          <div className="flex gap-20">
+          <div className="flex gap-20 flex-wrap">
             <div className="flex flex-col gap-3">
               <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Target Sectors</h3>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Agri Tech</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Fintech</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Health Tech</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Artificial Intelligence</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Cyber Security</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>E-Commerce</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Smart City</Link>
+              <p className='hover:text-[#78e0f4] duration-300'>Agri Tech</p>
+              <p className='hover:text-[#78e0f4] duration-300'>Fintech</p>
+              <p className='hover:text-[#78e0f4] duration-300'>Health Tech</p>
+              <p className='hover:text-[#78e0f4] duration-300'>Artificial Intelligence</p>
+              <p className='hover:text-[#78e0f4] duration-300'>Cyber Security</p>
+              <p className='hover:text-[#78e0f4] duration-300'>E-Commerce</p>
+              <p className='hover:text-[#78e0f4] duration-300'>Smart City</p>
             </div>
             <div className="flex flex-col gap-3">
               <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Explore</h3>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Exhibitors</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Media Partners</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Speakers</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Blogs</Link>
+              <Link href={"/attend/exhibitor-list"} className='hover:text-[#78e0f4] duration-300'>Exhibitors</Link>
+              <Link href={"#partners"} className='hover:text-[#78e0f4] duration-300'>Media Partners</Link>
+              <Link href={"/attend/speakers"} className='hover:text-[#78e0f4] duration-300'>Speakers</Link>
+              <Link href={"/media/blogs"} className='hover:text-[#78e0f4] duration-300'>Blogs</Link>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Company</h3>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>About us</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Our team</Link>
-              <Link href={"/"} className='hover:text-[#78e0f4] duration-300'>Buzz</Link>
+              <h3 className='text-2xl mb-3 text-[#78e0f4bb]'>Learn</h3>
+              <Link href={"/learn/ethiopia"} className='hover:text-[#78e0f4] duration-300'>About Ethiopia</Link>
+              <Link href={"/learn/contact"} className='hover:text-[#78e0f4] duration-300'>Contact us</Link>
             </div>
           </div>
 
@@ -88,7 +87,7 @@ export default function Footer() {
         <div className="w-full flex flex-col mb-20">
           <p className='max-w-[600px] mb-5 text-lg'>We respond lightning fast, so do not hesitate to reach out and discuss ideas for your next event.</p>
           {msg !== "" && <p style={{color: "#fff", backgroundColor: "orange", padding: "5px 10px", width: "fit-content", borderRadius: "5px", marginBottom: "10px"}}>{msg}</p>}
-          <form className='w-full flex gap-3' onSubmit={subscribe}>
+          <form className='w-full flex gap-3 flex-wrap md:flex-nowrap' onSubmit={subscribe}>
             {/* <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} /> */}
             {/* <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} /> */}
             <input className='w-full p-3 bg-white text-black placeholder:text-lg placeholder:text-[#050752] outline-none border-2 border-white focus:border-[#78e0f4] duration-300' type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />

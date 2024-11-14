@@ -40,7 +40,7 @@ export default function Search() {
   }, [word, e]);
   
   return (
-    <div className="relative w-full h-fit flex-[.2] flex flex-col gap-3">
+    <div className="relative min-w-60 w-full h-fit flex-[.2] flex flex-col gap-3">
       <div className='w-full h-fit border border-white rounded-md p-2 flex flex-col gap-5'>
           <p className='text-sm text-white'>Refine the list (min. 2 characters)</p>
           <input type="text" placeholder="Search" className='w-full bg-transparent text-[#78e0f4] placeholder-white placeholder:text-sm focus:border-[#78e0f4] duration-300 p-2 border rounded-md border-white outline-none' value={word} onChange={(e) => setWord(e.target.value)} onKeyDown={checkEmpty} onFocus={() => setToggleFocus(true)} onBlur={() => setTimeout(() => setToggleFocus(false), 500 )} />

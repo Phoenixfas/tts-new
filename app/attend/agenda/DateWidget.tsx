@@ -7,11 +7,11 @@ export default function DateWidget() {
 
 
     return (
-        <div className='w-full py-10 px-20 mb-20'>
-            <div className="flex items-center justify-center gap-10">
+        <div className='w-full py-10 px-10 md:px-20 mb-20'>
+            <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-10">
 
                 {conferenceAgenda?.map((agenda, index) => (
-                    <div key={index} className={`group p-2 flex items-center border border-white ${activeDate === index.toString() ? "bg-white" : ""} hover:bg-white duration-300 rounded-lg cursor-pointer`} onClick={() => setActiveDate(index.toString())}>
+                    <div key={index} className={`group w-full sm:w-fit justify-between sm:justify-start p-2 flex items-center border border-white ${activeDate === index.toString() ? "bg-white" : ""} hover:bg-white duration-300 rounded-lg cursor-pointer`} onClick={() => setActiveDate(index.toString())}>
                         <div className={`flex flex-col items-center text-xl ${activeDate === index.toString() ? "text-[#050752]" : "text-white"} group-hover:text-[#050752] font-bold px-3`}>
                             <p>DAY</p>
                             <p>{agenda.day}</p>

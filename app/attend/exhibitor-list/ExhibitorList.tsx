@@ -19,7 +19,7 @@ export default function ExhibitorList() {
         <p className='text-xl font-bold text-white'>Exhibitors</p>
         <div className="flex flex-wrap gap-5">
             {exhibitors && exhibitors?.map((exhibitor: any, index: any) => (
-                <Link href={`/attend/exhibitor-list/${exhibitor._id}`} key={index} className='w-[300px] h-[200px] bg-white rounded-md flex flex-col p-3 gap-3  duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white'>
+                <Link href={`/attend/exhibitor-list/${exhibitor._id}`} key={index} className='md:max-w-[300px] w-full h-[200px] bg-white rounded-md flex flex-col p-3 gap-3  duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white'>
                     <div className="w-full h-[100px] rounded-md overflow-hidden">
                         <Image className="w-full h-full object-cover" src={exhibitor.logo} alt={exhibitor.company_name} width={500} height={300} />
                     </div>

@@ -42,7 +42,7 @@ export default function ParticlesBg({ color, amount }: { color: string, amount: 
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 30,
       interactivity: {
         events: {
           onClick: {
