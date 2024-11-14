@@ -9,7 +9,7 @@ export default function HeroContent() {
     
     const { data: speakers = [], error } = useFetch('speakers')
   return (
-    <div className='relative w-full h-screen flex flex-col items-center sm:items-start justify-end px-5 sm:px-20 pt-20 sm:pb-20'>
+    <div className='relative w-full h-screen flex flex-col items-center sm:items-start justify-end px-5 sm:px-10 md:px-20 pt-20 sm:pb-20'>
         <h1 className='max-w-[1000px] text-[2.4rem] leading-[2.5rem] sm:text-6xl md:text-7xl md:leading-[5.25rem] text-center sm:text-left text-white font-bold mb-10'>EXPERIENCE THE BIGGEST TECH TRADE SHOW LIKE NEVER BEFORE</h1>
         <div className="w-full sm:w-fit flex flex-col sm:flex-row gap-2 rounded-md sm:rounded-full p-2 border border-[#78e0f4] bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] mb-5">
             <div className="py-2 px-5 rounded-md sm:rounded-full border border-[#78e0f4] bg-[#78e0f4] text-[#050752] hover:text-[#78e0f4] hover:bg-[#050752] duration-300">Explore All</div>

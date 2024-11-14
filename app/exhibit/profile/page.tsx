@@ -7,7 +7,7 @@ export default function page() {
   return (
     <div className='relative w-full min-h-[100vh]'>
         <ParticlesBg color="#78e0f4" amount={100} />
-        <Hero img='https://picsum.photos/1920/1082' title='Exhibition Profile' />
+        <Hero img='/images/pageshero/exhibitors.JPG' title='Exhibition Profile' />
         <ExhibitorProfile />
     </div>
   )

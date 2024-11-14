@@ -302,7 +302,7 @@
     background-color: #fff;
 }
 
-.rwanda__bottom{
+.rwanda__bottom, .rwanda__bottom_2{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -504,7 +504,7 @@
     .rwanda__right{
         flex: auto;
     }
-    .rwanda__bottom{
+    .rwanda__bottom, .rwanda__bottom_2{
         padding: 0 20px;
     }
     .rwanda__bottom__row:nth-of-type(1), .rwanda__bottom__row:nth-of-type(2){

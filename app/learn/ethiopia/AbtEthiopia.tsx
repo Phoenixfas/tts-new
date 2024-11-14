@@ -5,7 +5,7 @@ export default function AbtEthiopia() {
   return (
     <div className={style.rwanda}>
         <div className={style.rwanda__bottom}>
-            <div className={style.rwanda__bottom__row}>
+            <div className={`${style.rwanda__bottom__row} flex flex-col lg:flex-row lg:items-center gap-12 bg-[linear-gradient(to_top_right,_#78E0F4,_#4EAEE5,_#050752)] text-white p-[20px_!important] sm:p-12`}>
                 <div className={style.rwanda__bottom__col}>
                     <h1>Why Ethiopia?</h1>
                     <p>
@@ -41,19 +41,20 @@ export default function AbtEthiopia() {
             </div>
         </div>
 
-        <div className={style.rwanda__bottom_2}>
-            <div className={style.rwanda__bottom__row}>
+        <div className={"w-full flex flex-col items-center gap-7 px-5 sm:px-24"}>
+            <div className={`flex flex-col lg:flex-row-reverse lg:items-center gap-12 bg-[linear-gradient(to_bottom_left,_#78E0F4,_#4EAEE5,_#050752)] text-white p-5 sm:p-12`}>
                 <div className={style.rwanda__bottom__col}>
-                    <h1>Millennium Hall, Ethiopia</h1>
-                    <p>
+                    <h1 className="text-[2rem] leading-[2.2rem] font-light">Millennium Hall, Ethiopia</h1>
+                    <p className="text-justify">
                         Millennium Hall is one of the largest and most prestigious event venues in Ethiopia, located in the heart of Addis Ababa. It was inaugurated in 2007 to commemorate the Ethiopian Millennium and has since become a central hub for hosting international conferences, concerts, exhibitions, and high-profile events. The hall boasts a modern and spacious design, with a capacity of over 20,000 people, making it ideal for large gatherings such as trade shows, summits, and cultural celebrations.
                     </p>
-                    <p>
+                    <p className="text-justify">
                         Equipped with state-of-the-art facilities, Millennium Hall is a key destination for both local and international events, contributing to Addis Ababa&apos;s status as a major diplomatic and business hub in Africa. It has hosted significant events like the African Union summits, concerts by international artists, and large-scale exhibitions in sectors like technology, agriculture, and health. The venue&apos;s prime location near hotels, restaurants, and the Addis Ababa Bole International Airport adds to its appeal as a go-to destination for large events in Ethiopia.
                     </p>
                 </div>
-                <div className={style.rwanda__bottom__col}>
+                <div className="max-w-[600px]">
                     <Image
+                        className="rounded-3xl"
                         src="/images/learn/millennium.jpg"
                         alt="rwanda kigali"
                         width={2000}

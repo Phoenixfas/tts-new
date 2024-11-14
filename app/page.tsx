@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-[100vh] relative">
       <Bg />
-      {/* <ParticlesBg color="#78e0f4" amount={100} /> */}
+      <ParticlesBg color="#78e0f4" amount={100} />
       <HeroContent />
       <VideoSection />
       <CardsSection />

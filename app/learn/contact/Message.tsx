@@ -43,7 +43,7 @@ export default function Message() {
         }
     }
   return (
-    <div className='flex-[.6] bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] p-14 rounded-2xl'>
+    <div className='flex-[.6] bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] px-5 sm:px-14 py-14 rounded-2xl'>
         <form onSubmit={handleSubmit} className='w-full flex flex-col gap-5'>
             <h2 className='text-white text-center text-4xl font-bold mb-5'>Send us a Message</h2>
             {msg && <p className='p-1 text-base bg-green-400 text-white font-bold text-center rounded-md'>{msg}</p>}
