@@ -2,7 +2,6 @@ import { NextResponse, NextRequest } from "next/server";
 import dbConnect from "@/lib/db";
 import Visitor from "@/models/Visitor";
 import nodemailer from 'nodemailer';
-import fs from 'fs';
 import QRCode from 'qrcode';
 
 let mailTransporter = nodemailer.createTransport({
@@ -16,26 +15,7 @@ let mailTransporter = nodemailer.createTransport({
     }
 });
 
-
-export async function GET(request: NextRequest) {
-    try {
-        await dbConnect();
-        const visitors = await Visitor.find({});
-
-        return NextResponse.json({
-            success: true,
-            data: visitors,
-        }, { status: 200 });
-    } catch (error) {
-        return NextResponse.json({
-            success: false,
-            message: error,
-        }, { status: 404 });
-    }
-}
-
 export async function POST(request: NextRequest) {
-    
     try {    
         await dbConnect();
         const body = await request.json();
@@ -51,7 +31,14 @@ export async function POST(request: NextRequest) {
         }
 
         const newVisitor = await Visitor.create(body);
-        const qrCodeImage = await QRCode.toFile("qr-code.png", newVisitor.id, { version: 10, errorCorrectionLevel: 'H', width: 600, margin: 2 });
+        
+        // Generate QR code as a buffer
+        const qrCodeBuffer = await QRCode.toBuffer(newVisitor.id, { 
+            version: 10, 
+            errorCorrectionLevel: 'H', 
+            width: 600, 
+            margin: 2 
+        });
 
         let mailDetails = {
             from: '"Afriopia" <afriopiacom@gmail.com>', // sender address
@@ -61,83 +48,81 @@ export async function POST(request: NextRequest) {
             attachments: [
                 {
                     filename: "qr-code.png",
-                    path: "qr-code.png",
+                    content: qrCodeBuffer, // Attach the buffer
                 },
               ],
             html: `
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                    <title>Tech Trade Show - Registration Confirmation</title>
-                    <style>
-                        body {
-                            margin: 0;
-                            padding: 30px;
-                            background-color: #f2f2f2;
-                            font-family: 'Poppins', sans-serif;
-                            color: #131616;
-                        }
-                        .logo {
-                            width: 200px;
-                            height: 150px;
-                            object-fit: contain;
-                        }
-                        .qr {
-                            width: 200px;
-                            height: 200px;
-                        }
-                        .container {
-                            max-width: 800px;
-                            margin: 0 auto;
-                        }
-                    </style>
-                    </head>
-                    <body>
-                        <div class="container">
-                            <div style="text-align: center;">
-                                <a href="https://techtradeshow.tech"><img class="logo" src="https://res.cloudinary.com/drp73bqti/image/upload/v1730051512/afriopia/tts_logo_sya4hv.png" alt="TTS Logo"></a>
-                                <h1>Tech Trade Show - Registration Confirmation</h1>
-                            </div>
-                            <div class="details">
-                                <p>Dear ${newVisitor.first_name},</p>
-                                <p>We are pleased to inform you that your registration to visit in TTS has been confirmed. </p>
-                    
-                                <p>Details of the event are as follows:</p>
-                                <ul>
-                                <li>Event: Tech Trade Show</li>
-                                <li>Date: TBS</li>
-                                <li>Location: Addis Ababa, Millinium Hall</li>
-                                </ul>
-
-                                <p>Attached to this email, you will find a QR code which you can use for check-in verification at the event. Please make sure to bring a printed copy or have the code accessible on your mobile device.</p>
-
-                                <p>We look forward to seeing you at the Tech Trade Show and are excited to provide you with an opportunity to learn about the latest advancements in tech.</p>
-
-                                <p>If you have any questions or concerns, please do not hesitate to contact us at hello@techtradeshow.tech</p>
-                                
-                                <p>Best regards,</p>
-                                <p>TTS Team</p>
-                            </div>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <title>Tech Trade Show - Registration Confirmation</title>
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 30px;
+                        background-color: #f2f2f2;
+                        font-family: 'Poppins', sans-serif;
+                        color: #131616;
+                    }
+                    .logo {
+                        width: 200px;
+                        height: 150px;
+                        object-fit: contain;
+                    }
+                    .qr {
+                        width: 200px;
+                        height: 200px;
+                    }
+                    .container {
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+                </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <div style="text-align: center;">
+                            <a href="https://techtradeshow.tech"><img class="logo" src="https://res.cloudinary.com/drp73bqti/image/upload/v1730051512/afriopia/tts_logo_sya4hv.png" alt="TTS Logo"></a>
+                            <h1>Tech Trade Show - Registration Confirmation</h1>
                         </div>
-                    </body>
-                    </html>
-                    `
+                        <div class="details">
+                            <p>Dear ${newVisitor.first_name},</p>
+                            <p>We are pleased to inform you that your registration to visit in TTS has been confirmed. </p>
+                
+                            <p>Details of the event are as follows:</p>
+                            <ul>
+                            <li>Event: Tech Trade Show</li>
+                            <li>Date: TBS</li>
+                            <li>Location: Addis Ababa, Millinium Hall</li>
+                            </ul>
+
+                            <p>Attached to this email, you will find a QR code which you can use for check-in verification at the event. Please make sure to bring a printed copy or have the code accessible on your mobile device.</p>
+
+                            <p>We look forward to seeing you at the Tech Trade Show and are excited to provide you with an opportunity to learn about the latest advancements in tech.</p>
+
+                            <p>If you have any questions or concerns, please do not hesitate to contact us at hello@techtradeshow.tech</p>
+                            
+                            <p>Best regards,</p>
+                            <p>TTS Team</p>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            `
         };
 
-
+        // Send email
         mailTransporter.sendMail(mailDetails, function (err, data) {
             if (err) {
-                console.log('Error Occurs');
+                console.log('Error Occurs:', err);
             } else {
                 console.log('Email sent successfully');
-                fs.unlinkSync("qr-code.png");
             }
         });
         
         return NextResponse.json({
             success: true,
-            data: newVisitor,
-            qr: fs.readFileSync("qr-code.png", { encoding: "base64" })
+            data: newVisitor
         }, { status: 200 });
     } catch (error) {
         return NextResponse.json({
