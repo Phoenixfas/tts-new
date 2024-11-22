@@ -15,6 +15,23 @@ let mailTransporter = nodemailer.createTransport({
     }
 });
 
+export async function GET(request: NextRequest) {
+    try {
+        await dbConnect();
+        const visitors = await Visitor.find({});
+        return NextResponse.json({
+            success: true,
+            data: visitors,
+        }, { status: 200 });
+    } catch (error) {
+        return NextResponse.json({
+            success: false,
+            message: error,
+        }, { status: 404 });
+    }
+}
+
+
 export async function POST(request: NextRequest) {
     try {    
         await dbConnect();
