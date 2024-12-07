@@ -50,50 +50,50 @@ export default function Navbar() {
 
     if (isActive) return (
         <>
-            <div className={`fixed top-0 left-0 z-[99999999] w-full ${isScrolled ? "h-[70px] py-3" : "h-[100px] py-5"} duration-300 flex justify-between gap-10 items-center px-5 sm:px-20`}>
+            <div className={`fixed top-0 left-0 z-[99999999] w-full ${isScrolled ? "h-[70px] py-3" : "h-[100px] py-5"} duration-300 flex justify-between gap-10 items-center px-5 sm:px-20 mokoto`}>
                 <div className={`absolute ${isScrolled ? "top-0" : "-top-full"} duration-300 left-0 w-full h-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)]`}></div>
                 <Link href={"/"} className="relative w-[100px] h-full">
                     <Image className="w-full h-full object-contain" src="/logo_white.svg" alt="logo" width={100} height={70} />
                 </Link>
 
-                <div className="relative h-full hidden lg:flex items-center gap-10">
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                <div className="relative h-full hidden lg:flex items-center gap-10 text-sm">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Exhibit</span>
                         <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/exhibit/why-exhibit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Exhibit</Link>
-                            <Link href={"/exhibit/book-a-stand"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Book a Stand</Link>
-                            <Link href={"/exhibit/become-sponsor"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become a Sponsor</Link>
-                            <Link href={"/exhibit/profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibition profile</Link>
-                            <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Floor Plan</Link>
+                            <Link href={"/exhibit/why-exhibit"} className="p-3 text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Exhibit</Link>
+                            <Link href={"/exhibit/book-a-stand"} className="p-3 text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Book a Stand</Link>
+                            <Link href={"/exhibit/become-sponsor"} className="p-3 text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become a Sponsor</Link>
+                            <Link href={"/exhibit/profile"} className="p-3 text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibition profile</Link>
+                            <Link href={"/"} className="p-3 text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Floor Plan</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Attend</span>
                         <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/attend/agenda"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Conference Agenda</Link>
-                            <Link href={"/attend/speakers"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Speakers</Link>
-                            <Link href={"/attend/exhibitor-list"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibitor list</Link>
-                            <Link href={"/attend/why-visit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Visit</Link>
-                            <Link href={"/attend/visitor-profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Visitor Profile</Link>
+                            <Link href={"/attend/agenda"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Conference Agenda</Link>
+                            <Link href={"/attend/speakers"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Speakers</Link>
+                            <Link href={"/attend/exhibitor-list"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Exhibitor list</Link>
+                            <Link href={"/attend/why-visit"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Why Visit</Link>
+                            <Link href={"/attend/visitor-profile"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Visitor Profile</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Learn</span>
                         <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/learn/ethiopia"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">About Ethiopia</Link>
-                            <Link href={"/learn/contact"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Contact Us</Link>
+                            <Link href={"/learn/ethiopia"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">About Ethiopia</Link>
+                            <Link href={"/learn/contact"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Contact Us</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Media</span>
                         <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/media/blogs"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Blogs</Link>
-                            {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link> */}
-                            {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link> */}
+                            <Link href={"/media/blogs"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Blogs</Link>
+                            {/* <Link href={"/"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link> */}
+                            {/* <Link href={"/"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link> */}
                         </div>
                     </div>
-                    <Link href={"/exhibit/book-a-stand"} className={`text-lg font-semibold  hover:text-[#050752] hover:bg-white duration-300 border px-5 py-2 rounded-md ${isScrolled ? "bg-transparent border-white text-white" : "bg-white text-[#050752] border-transparent"}`}>Book a Stand</Link>
-                    <Link href={"/register"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">Register</Link>
+                    <Link href={"/exhibit/book-a-stand"} className={`font-semibold  hover:text-[#050752] hover:bg-white duration-300 border px-5 py-2 rounded-md ${isScrolled ? "bg-transparent border-white text-white" : "bg-white text-[#050752] border-transparent"}`}>Book a Stand</Link>
+                    <Link href={"/register"} className="font-semibold text-white hover:text-[#78e0f4] duration-300">Visit</Link>
                 </div>
 
                 <div className="relative flex-[1] flex justify-end h-full cursor-pointer lg:hidden" onClick={() => toggleMobile()}>
@@ -110,44 +110,44 @@ export default function Navbar() {
                     <AiOutlineClose />
                 </div>
 
-                <div className="relative flex flex-col items-center gap-10">
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                <div className="relative flex flex-col items-center gap-10 text-sm mokoto">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Exhibit</span>
                         <div className="absolute z-[99999999] top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/exhibit/why-exhibit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Why Exhibit</Link>
-                            <Link href={"/exhibit/book-a-stand"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Book a Stand</Link>
-                            <Link href={"/exhibit/become-sponsor"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Become a Sponsor</Link>
-                            <Link href={"/exhibit/profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Exhibition profile</Link>
-                            <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Floor Plan</Link>
+                            <Link href={"/exhibit/why-exhibit"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Why Exhibit</Link>
+                            <Link href={"/exhibit/book-a-stand"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Book a Stand</Link>
+                            <Link href={"/exhibit/become-sponsor"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Become a Sponsor</Link>
+                            <Link href={"/exhibit/profile"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Exhibition profile</Link>
+                            <Link href={"/"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Floor Plan</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Attend</span>
                         <div className="absolute z-[99999999] top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/attend/agenda"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Conference Agenda</Link>
-                            <Link href={"/attend/speakers"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Speakers</Link>
-                            <Link href={"/attend/exhibitor-list"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Exhibitor list</Link>
-                            <Link href={"/attend/why-visit"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Why Visit</Link>
-                            <Link href={"/attend/visitor-profile"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Visitor Profile</Link>
+                            <Link href={"/attend/agenda"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Conference Agenda</Link>
+                            <Link href={"/attend/speakers"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Speakers</Link>
+                            <Link href={"/attend/exhibitor-list"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Exhibitor list</Link>
+                            <Link href={"/attend/why-visit"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Why Visit</Link>
+                            <Link href={"/attend/visitor-profile"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Visitor Profile</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Learn</span>
                         <div className="absolute z-[99999999] top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/learn/ethiopia"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>About Ethiopia</Link>
-                            <Link href={"/learn/contact"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Contact Us</Link>
+                            <Link href={"/learn/ethiopia"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>About Ethiopia</Link>
+                            <Link href={"/learn/contact"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Contact Us</Link>
                         </div>
                     </div>
-                    <div className="relative text-nowrap group h-full flex items-center text-lg font-semibold text-white hover:text-[#78e0f4] duration-300">
+                    <div className="relative text-nowrap group h-full flex items-center font-semibold text-white hover:text-[#78e0f4] duration-300">
                         <span>Media</span>
                         <div className="absolute z-[99999999] top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
-                            <Link href={"/media/blogs"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Blogs</Link>
-                            {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link> */}
-                            {/* <Link href={"/"} className="p-3  text-lg text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link> */}
+                            <Link href={"/media/blogs"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Blogs</Link>
+                            {/* <Link href={"/"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Press Material</Link> */}
+                            {/* <Link href={"/"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Become Media Partner</Link> */}
                         </div>
                     </div>
-                    <Link href={"/exhibit/book-a-stand"} className={`text-lg font-semibold  hover:text-[#050752] hover:bg-white duration-300 border px-5 py-2 rounded-md ${isScrolled ? "bg-transparent border-white text-white" : "bg-white text-[#050752] border-transparent"}`} onClick={() => toggleMobile()}>Book a Stand</Link>
-                    <Link href={"/register"} className="text-lg font-semibold text-white hover:text-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Register</Link>
+                    <Link href={"/exhibit/book-a-stand"} className={`font-semibold  hover:text-[#050752] hover:bg-white duration-300 border px-5 py-2 rounded-md ${isScrolled ? "bg-transparent border-white text-white" : "bg-white text-[#050752] border-transparent"}`} onClick={() => toggleMobile()}>Book a Stand</Link>
+                    <Link href={"/register"} className="font-semibold text-white hover:text-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Visit</Link>
                 </div>
             </div>
         </>

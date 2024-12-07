@@ -419,8 +419,10 @@
 }
 .speakers__left h1 {
   position: relative;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: 'Mokoto', sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 400;
   color: #050752;
   position: relative;
 }
@@ -443,7 +445,8 @@
   /* margin-top: 50px; */
   /* background-color: #fff; */
   color: #4eaee5;
-  font-size: 1.2rem;
+  font-family: 'Mokoto', sans-serif;
+  font-size: 1rem;
   padding: 10px 30px;
   border-radius: 9999px;
   border: 3px solid #4eaee5;
@@ -510,7 +513,8 @@
   padding: 10px 20px;
 }
 .speakers__card__content h3 {
-  font-size: 1.3rem;
+  font-family: 'Mokoto', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
 }
 .speakers__card__content > span {

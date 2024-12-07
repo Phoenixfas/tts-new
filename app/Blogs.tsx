@@ -66,9 +66,9 @@ export default function Blogs() {
                 {blogs && blogs?.map((blog: any, index: any) => (
                     <Link href={`/media/blogs/${blog._id}`} key={index} className="slide min-w-[100%_!important] sm:min-w-[400px_!important] sm:max-w-[400px_!important] sm:w-[400px] flex flex-col">
                         <Image className='w-full max-h-[300px] object-cover mb-10' src={blog.image} alt={blog.title} width={400} height={300} />
-                        <h3 className='text-[#4eaee5] hover:text-[#050752] duration-300 text-4xl mb-7'>{blog.title}</h3>
+                        <h3 className='text-[#4eaee5] hover:text-[#050752] duration-300 text-2xl mb-7 mokoto'>{blog.title}</h3>
                         <p className='text-gray-500 text-lg mb-7'>{blog.snippet.slice(0, 90)} {blog.snippet.length > 90 ? "..." : ""}</p>
-                        <div className='w-fit px-8 py-3 rounded-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white hover:bg-transparent hover:text-[#78e0f4] duration-300 overflow-hidden'>Read more</div>
+                        <div className='w-fit px-8 py-3 rounded-full bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] text-white hover:bg-transparent hover:text-[#78e0f4] duration-300 overflow-hidden mokoto text-[0.7rem]'>Read more</div>
                     </Link>
                 ))}
             </div>

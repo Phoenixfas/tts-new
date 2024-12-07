@@ -11,7 +11,7 @@ export default function TargetSectors() {
                     <div className="relative flip-box-inner w-full sm:w-[250px] h-[350px] flex flex-col items-center justify-center text-center gap-5">
                         <div className="absolute w-full h-full flex items-center justify-center flip-box-front">
                             <Image className="absolute object-cover w-full h-full rounded-xl brightness-75" src={sector?.image} alt={sector?.name} width={500} height={900} />
-                            <h3 className="relative w-full px-5 text-2xl font-black text-white uppercase mokoto">{sector?.name}</h3>
+                            <h3 className="relative w-full px-5 text-2xl font-black text-white uppercase mokoto drop-shadow-[0_0_10px_#78e0f4]">{sector?.name}</h3>
                         </div>
                         <div className="absolute w-full h-full flex items-center justify-center flip-box-back">
                             <div className="absolute w-full h-full rounded-xl bg-gradient-to-br from-[#050752] to-[#4EAEE5]"></div>
