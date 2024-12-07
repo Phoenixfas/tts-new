@@ -34,7 +34,8 @@ export default function Bg() {
             <Hero />
         </div>
         <div className="bgs opacity-0 transition-opacity ease-in-out duration-[1s]">
-            <Image className="brightness-[.25]" src="/images/hero/event-bg.jpg" alt="BG" layout="fill" objectFit="cover" />
+            <div className="w-full h-full bg-[#eee] "></div>
+            {/* <Image className="brightness-[.25]" src="/images/hero/event-bg.jpg" alt="BG" layout="fill" objectFit="cover" /> */}
         </div>
     </div>
   )

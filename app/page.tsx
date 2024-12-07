@@ -15,15 +15,15 @@ export default function Home() {
   return (
     <div className="w-full min-h-[100vh] relative">
       <Bg />
-      <ParticlesBg color="#78e0f4" amount={100} />
+      {/* <ParticlesBg color="#4eaee5" amount={70} /> */}
       <HeroContent />
       <VideoSection />
       <CardsSection />
+      <Sponsors />
+      <TargetSectors />
+      <Speakers />
       <MovingText />
       <Media />
-      <Speakers />
-      <TargetSectors />
-      <Sponsors />
       <Blogs />
     </div>
   );

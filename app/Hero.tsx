@@ -46,13 +46,16 @@ export default function Hero() {
 
     return (
         <div className='relative w-full h-screen overflow-hidden'>
-            <div className="relative w-full h-screen overflow-hidden" ref={slideContainer}>
+            <div className="relative w-full h-screen">
+                <video className="w-full h-full object-cover" src="/videos/bg.mp4" autoPlay controls={false} muted loop></video>
+            </div>
+            {/* <div className="relative w-full h-screen overflow-hidden" ref={slideContainer}>
                 {hero.map((item, index) => (
                     <div key={index} className="mySlides opacity-0 transition-opacity ease-in-out duration-[2s]">
                         <Image src={item.image} alt={item.title} layout="fill" objectFit="cover" />
                     </div>
                 ))}
-            </div>
+            </div> */}
             <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(#000000_0%,_#00000088_15%,_#00000088_85%,_#000000_100%)]"></div>
         </div>
     );

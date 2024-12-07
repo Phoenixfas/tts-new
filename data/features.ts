@@ -28,6 +28,12 @@ const features = [
         title: 'Conference',
         description: 'A platform for experts thought leaders, and practitioners to showcase their expertise, share best practices, and address key challenges facing their respective industries or fields',
         image: '/images/features/conference.JPG'
+    },
+    {
+        id: 6,
+        title: "Smart City Corner",
+        description: "A dedicated space where innovative solutions for urban development, sustainability, and technology integration are showcased, offering insights into the future of smart cities.",
+        image: "/images/features/conference.JPG"
     }
 ]
 

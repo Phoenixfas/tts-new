@@ -372,6 +372,7 @@
 .speakers {
   width: 100%;
   height: fit-content;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   padding: 30px 0;
@@ -381,6 +382,7 @@
   /* backdrop-filter: blur(10px); */
   position: relative;
   overflow: hidden;
+  /* background-color: #050752; */
 }
 .speakers__bg {
   width: 100%;
@@ -418,8 +420,8 @@
 .speakers__left h1 {
   position: relative;
   font-size: 2.5rem;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 700;
+  color: #050752;
   position: relative;
 }
 /* .speakers__left h1::after{
@@ -440,16 +442,16 @@
   justify-content: center;
   /* margin-top: 50px; */
   /* background-color: #fff; */
-  color: #78e0f4;
+  color: #4eaee5;
   font-size: 1.2rem;
   padding: 10px 30px;
   border-radius: 9999px;
-  border: 3px solid #78e0f4;
+  border: 3px solid #4eaee5;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .speakers__btn:hover {
-  background-color: #78e0f4;
+  background-color: #4eaee5;
   color: #fff;
 }
 .speakers__right {
@@ -459,18 +461,21 @@
   border-radius: 5px;
 }
 .speakers__con {
+  position: relative;
+  height: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  transform: translateY(420px);
   animation: scrolldown 20s linear infinite;
 }
 @keyframes scrolldown {
   0% {
-    transform: translateY(0);
+    transform: translateY(420px);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateY(-33.33%);
   }
 }
 .speakers__card {
