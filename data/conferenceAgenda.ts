@@ -1,7 +1,7 @@
 const conferenceAgenda = [
     {
         id: 1,
-        date: "Sunday August 21 2025",
+        date: "Thursday May 15 2025",
         day: "1",
         activities: [
             {
@@ -54,7 +54,7 @@ const conferenceAgenda = [
     },
     {
         id: 2,
-        date: "Monday August 22 2025",
+        date: "Friday May 16 2025",
         day: "2",
         activities: [
             {
@@ -111,7 +111,7 @@ const conferenceAgenda = [
     },
     {
         id: 3,
-        date: "Tuesday August 23 2025",
+        date: "Saturday May 17 2025",
         day: "3",
         activities: [
             {

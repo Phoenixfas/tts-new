@@ -141,9 +141,10 @@
   /* transform: translateX(-50%); */
 }
 .card__bottom h3 {
-  font-size: 1.5rem;
+  font-family: "Mokoto", sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 20px;
 }
 .card__bottom p {
   font-size: 1rem;
@@ -193,9 +194,10 @@
   margin-bottom: 50px;
 }
 .serviceHolder h1 {
-  font-size: 2.5rem;
-  line-height: 2.8rem;
-  color: #fff;
+  font-family: "Mokoto", sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #050752;
   margin-bottom: 30px;
   animation: appear 0.5s ease-in;
 }
@@ -209,7 +211,7 @@
 .serviceContent {
   margin-top: 50px;
   font-size: 1.2rem;
-  color: #78e0f4;
+  color: #050752;
   padding: 0 20px;
 }
 .serviceContent li {
@@ -220,25 +222,25 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #78e0f4;
+  color: #050752;
 }
 .serviceContent h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #78e0f4;
+  color: #050752;
 }
 .serviceContent h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #78e0f4;
+  color: #050752;
 }
 .serviceContent p {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 20px;
-  color: #78e0f4;
+  color: #050752;
 }
 .serviceContent img {
   width: 100%;
@@ -303,8 +305,9 @@
   width: 100%;
   padding: 0 20px;
   text-align: center;
+  font-family: "MokoTo", sans-serif;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .bookingForm form {
   max-width: 800px;

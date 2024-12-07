@@ -90,7 +90,7 @@ export default function RegisterVisitor() {
             <p>When you register for AMEC, our dedicated team will provide you with a personalized visa support package. This includes an official invitation letter to assist with your visa application process. We&apos;re committed to ensuring your journey to Kigali is as smooth as possible.</p>
         </div> */}
         <div className={style.bookingForm}>
-            <h1 style={{fontSize: "3rem"}}>Register to Visit</h1>
+            <h1 style={{fontSize: "2rem"}}>Register to Visit</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
             <br />
             <form onSubmit={onSubmit}>

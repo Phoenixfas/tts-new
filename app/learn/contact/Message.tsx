@@ -45,13 +45,13 @@ export default function Message() {
   return (
     <div className='flex-[.6] bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] px-5 sm:px-14 py-14 rounded-2xl'>
         <form onSubmit={handleSubmit} className='w-full flex flex-col gap-5'>
-            <h2 className='text-white text-center text-4xl font-bold mb-5'>Send us a Message</h2>
+            <h2 className='text-white text-center text-2xl font-bold mb-5 mokoto'>Send us a Message</h2>
             {msg && <p className='p-1 text-base bg-green-400 text-white font-bold text-center rounded-md'>{msg}</p>}
             <input type="text" placeholder='Name:' className='w-full p-5 bg-[#f6f6f6] rounded-xl' required value={name} onChange={(e) => setName(e.target.value)} />
             <input type="tel" placeholder='Phone:' className='w-full p-5 bg-[#f6f6f6] rounded-xl' value={phone} onChange={(e) => setPhone(e.target.value)} />
             <input type="email" placeholder='Email:' className='w-full p-5 bg-[#f6f6f6] rounded-xl' required value={email} onChange={(e) => setEmail(e.target.value)} />
             <textarea placeholder='Message:' className='w-full p-5 bg-[#f6f6f6] rounded-xl' required  value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-            <button type='submit' className='w-full p-5 bg-[#050752] duration-300 hover:bg-[#78E0F4] text-white hover:text-[#050752] text-lg rounded-xl'>{loading ? "sending..." : "send"}</button>
+            <button type='submit' className='w-full p-5 bg-[#050752] duration-300 hover:bg-[#78E0F4] text-white hover:text-[#050752] text-base rounded-xl mokoto'>{loading ? "sending..." : "send"}</button>
         </form>
     </div>
   )

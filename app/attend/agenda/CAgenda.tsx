@@ -25,17 +25,17 @@ export default function CAgenda() {
             <div className="w-full flex flex-col gap-5">
 
                 {agendas.map((agenda, index) => (
-                    <div key={index} className="p-3 flex flex-col gap-7 border rounded-md text-white">
+                    <div key={index} className="p-3 flex flex-col gap-7 border border-[#050752] rounded-md text-white">
                         <div className="flex items-center gap-3">
                             <div className="p-1 rounded-sm bg-[#4EAEE5]">{agenda.time}</div>
                             <div className="">{getFullDay(agenda?.order)?.date}</div>
                         </div>
                         <div className="p-1 rounded-sm bg-[#78E0F4] w-fit text-[#050752]">{agenda.name}</div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-[#050752]">
                             <h3 className="font-bold">{agenda.format}</h3>
                             {/* <div dangerouslySetInnerHTML={{__html: agenda?.description}}></div> */}
                         </div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-[#050752]">
                             <h3 className="font-bold uppercase">Moderators</h3>
                             <p>{agenda.moderator}</p>
                         </div>

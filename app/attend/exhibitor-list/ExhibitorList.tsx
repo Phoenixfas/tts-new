@@ -6,7 +6,7 @@ import useFetch from "@/hooks/useClientFetch"
 import { useEffect, useState } from "react"
 
 export default function ExhibitorList() {
-    const { data: e = [], error } = useFetch('exhibitors')
+    const { data: e = [], loading, error } = useFetch('exhibitors')
     const [exhibitors, setExhibitors] = useState([])
 
     useEffect(() => {
@@ -14,9 +14,16 @@ export default function ExhibitorList() {
             setExhibitors(e.filter((d: any) => d.approved === true))
         }
     }, [e])
+
+    
   return (
     <div className='flex-[.8] flex flex-col gap-5'>
-        <p className='text-xl font-bold text-white'>Exhibitors</p>
+        <p className='text-lg font-bold text-white mokoto'>Exhibitors</p>
+        {loading && (
+            <div className="w-full h-full flex items-center justify-center">
+                <div className="w-12 h-12 spinner"></div>
+            </div>
+        )}
         <div className="flex flex-wrap gap-5">
             {exhibitors && exhibitors?.map((exhibitor: any, index: any) => (
                 <Link href={`/attend/exhibitor-list/${exhibitor._id}`} key={index} className='md:max-w-[300px] w-full h-[200px] bg-white rounded-md flex flex-col p-3 gap-3  duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white'>

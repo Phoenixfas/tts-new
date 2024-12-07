@@ -121,7 +121,7 @@ export default function BookAStand() {
   return (
     <div style={{minHeight: "100vh", paddingTop: "150px"}} className={style.booking}>
         <div className={style.bookingForm}>
-            <h1 style={{fontSize: "3rem"}}>Book A Stand</h1>
+            <h1 style={{fontSize: "2rem"}}>Book A Stand</h1>
             {error && <p style={{color: "#fff", backgroundColor: "orange", padding: "10px 20px", borderRadius: "5px", transition: "0.3s"}}>{error}</p>}
             <form onSubmit={onSubmit}>
                 <div className={style.formInput}>

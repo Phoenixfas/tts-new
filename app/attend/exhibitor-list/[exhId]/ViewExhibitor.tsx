@@ -39,7 +39,7 @@ export default function ViewExhibitor() {
                     <div className="flex flex-col sm:flex-row sm:items-center gap-10">
                         <Image className="w-[150px] h-[150px] object-cover rounded-md" src={exhibitor.logo} alt={exhibitor.company_name} width={500} height={300} />
                         <div className="flex flex-col gap-3">
-                            <h1 className="text-3xl font-bold text-white">{exhibitor.company_name}</h1>
+                            <h1 className="text-2xl font-bold text-white mokoto">{exhibitor.company_name}</h1>
                             <div className="flex items-center gap-2 text-white">
                                 <FaLocationPin />
                                 <p>{exhibitor.vendor_loc}</p>

@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
                             <p>Details of the event are as follows:</p>
                             <ul>
                             <li>Event: Tech Trade Show</li>
-                            <li>Date: TBS</li>
+                            <li>Date: May 15-17, 2025</li>
                             <li>Location: Addis Ababa, Millinium Hall</li>
                             </ul>
 
