@@ -51,7 +51,7 @@ export default function Blogs() {
   return (
     <div className='relative w-full flex flex-col gap-16 py-20'>
         <div className="w-full flex flex-col gap-16 px-5 sm:px-20">
-            <h2 className='text-[#050752] text-5xl mokoto-mark drop-shadow-[0_0_10px_#78e0f4]'>Dig into our blogs...</h2>
+            <h2 className='text-[#050752] text-4xl sm:text-5xl mokoto-mark drop-shadow-[0_0_10px_#78e0f4]'>Dig into our blogs...</h2>
             <div className="flex items center gap-3 ml-20">
                 <div className="px-5 py-3 border-2 border-[#78e0f4] hover:border-[#4EAEE5] text-[#4eaee5] hover:text-[#4EAEE5] cursor-pointer hover:bg-[#4EAEE555] duration-300" onClick={() => scrollRight()}>
                     <FaArrowLeft />

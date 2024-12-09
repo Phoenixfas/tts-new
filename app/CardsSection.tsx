@@ -6,7 +6,7 @@ import features from '@/data/features'
 export default function CardsSection() {
   return (
     <div className='relative flex flex-col items-center gap-10 py-10 px-10 sm:px-20'>
-        <h2 className='text-5xl text-[#050752] font-black text-center mokoto-mark mb-10 drop-shadow-[0_0_10px_#78e0f4]'>Show Features</h2>
+        <h2 className='text-4xl sm:text-5xl text-[#050752] font-black text-center mokoto-mark mb-10 drop-shadow-[0_0_10px_#78e0f4]'>Show Features</h2>
         <div className="flex flex-col gap-4">
             <div className="flex flex-wrap justify-center gap-4 w-full">
                 {features?.map((feature: any, index: any) => (

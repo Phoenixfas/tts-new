@@ -1024,7 +1024,7 @@
 
   .speakers {
     width: 100%;
-    min-height: 120vh;
+    min-height: 150vh;
     padding: 50px 30px;
     flex-direction: column;
     gap: 50px;
@@ -1034,8 +1034,8 @@
     padding: 0;
   }
   .speakers__left h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem /* 24px */;
+    line-height: 2rem
   }
   .speakers__left h1::after {
     width: 250px;

@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
         // Validate the presence of userId and ensure it is a valid ObjectId
         if (!userId || !Types.ObjectId.isValid(userId)) {
-            return handleError("Invalid or missing Visitor ID", 400);
+            return handleError("Invalid or Incorrect ID", 404);
         }
 
         // Check if the visitor exists

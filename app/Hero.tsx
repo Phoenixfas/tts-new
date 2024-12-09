@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import hero from "@/data/hero"
 import { usePathname } from "next/navigation"
+import ParticlesBg from "@/components/ParticlesBg"
 
 export default function Hero() {
     const pathname = usePathname()
@@ -57,6 +58,7 @@ export default function Hero() {
                 ))}
             </div> */}
             <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(#000000_0%,_#00000088_15%,_#00000088_85%,_#000000_100%)]"></div>
+            <ParticlesBg color="#4eaee5" amount={70} />
         </div>
     );
 }
