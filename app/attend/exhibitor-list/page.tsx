@@ -3,6 +3,12 @@ import Search from './Search'
 import ExhibitorList from './ExhibitorList'
 import Hero from '@/components/Hero'
 // import ParticlesBg from '@/components/ParticlesBg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - Exhibitor List',
+  description: 'Tech Trade Show Exhibitor List',
+}
 
 export default function page() {
   return (

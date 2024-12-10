@@ -1,5 +1,11 @@
 // import ParticlesBg from "@/components/ParticlesBg"
 import BecomeSponsor from "./BecomeSponsor"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - Become a Sponsor',
+  description: 'Tech Trade Show Become a Sponsor',
+}
 
 export default function page() {
   return (

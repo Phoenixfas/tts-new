@@ -2,6 +2,12 @@ import Hero from '@/components/Hero'
 import React from 'react'
 import WhyExhibit from './WhyExhibit'
 // import ParticlesBg from '@/components/ParticlesBg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - Why Exhibit',
+  description: 'Why Exhibit At Tech Trade Show',
+}
 
 export default function page() {
   return (

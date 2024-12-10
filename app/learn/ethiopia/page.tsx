@@ -2,6 +2,13 @@ import Hero from '@/components/Hero'
 import React from 'react'
 import AbtEthiopia from './AbtEthiopia'
 // import ParticlesBg from '@/components/ParticlesBg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - About Ethiopia',
+  description: 'Tech Trade Show - Learn about Ethiopia and its culture, history, and more.',
+}
+
 
 export default function page() {
   return (

@@ -1,5 +1,11 @@
 // import ParticlesBg from "@/components/ParticlesBg";
 import RegisterVisitor from "./RegisterVisitor";
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - Register To Visit',
+  description: 'Tech Trade Show Register Visitor',
+}
 
 
 export default function page() {

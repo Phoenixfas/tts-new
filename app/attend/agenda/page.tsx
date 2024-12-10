@@ -2,7 +2,13 @@ import Hero from '@/components/Hero'
 import React from 'react'
 import DateWidget from './DateWidget'
 import CAgenda from './CAgenda'
+import { Metadata } from 'next'
 // import ParticlesBg from '@/components/ParticlesBg'
+
+export const metadata: Metadata = {
+  title: 'TTS - Conference Agenda',
+  description: 'Tech Trade Show Conference Agenda',
+}
 
 export default function page() {
   return (

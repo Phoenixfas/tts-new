@@ -1,5 +1,7 @@
 import style from "../../../styles/Learn.module.css";
 import Image from "next/image";
+import Gallery from "./Gallery";
+import gallery from "@/data/gallery";
 
 export default function AbtEthiopia() {
   return (
@@ -73,7 +75,8 @@ export default function AbtEthiopia() {
 
         <div className="w-full h-[500px] flex flex-col items-center mt-10">
             <h2 className="text-2xl text-[#050752] text-center font-bold mokoto">Ethiopia - land of origins</h2>
-            <Image className="w-full h-full object-contain" src="/images/learn/origins.jpg" alt="land of origins" width={2000} height={2000} priority quality={100} />
+            <Gallery gallery={gallery} />
+            {/* <Image className="w-full h-full object-contain" src="/images/learn/origins.jpg" alt="land of origins" width={2000} height={2000} priority quality={100} /> */}
         </div>
 
     </div>

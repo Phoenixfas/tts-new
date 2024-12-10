@@ -4,6 +4,12 @@ import Info from './Info'
 import Message from './Message'
 import Map from './Map'
 // import ParticlesBg from '@/components/ParticlesBg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Contact us for any queries or information.',
+}
 
 export default function page() {
   return (

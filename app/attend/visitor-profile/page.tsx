@@ -1,6 +1,12 @@
 import Hero from '@/components/Hero'
 import VisitorProfile from './VisitorProfile'
 // import ParticlesBg from '@/components/ParticlesBg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'TTS - Visitor Profile',
+  description: 'Tech Trade Show Visitor Profile',
+}
 
 export default function page() {
   return (

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tech Trade Show",
     description: "Discover the future of technology at the Tech Trade Show. Network with experts, experience the latest tech, and participate in exclusive sessions and demos.",
-    url: "https://www.techtradeshow2024.com",
+    url: "https://www.ttsglobal.tech",
     siteName: "Tech Trade Show",
     images: [
       {
