@@ -2,13 +2,13 @@ const features = [
     {
         id: 1,
         title: 'Hackhaton',
-        description: 'participants work together, often in teams, to create innovative solutions to specific challenges or problems within a limited timeframe.',
+        description: 'Participants work together, often in teams, to create innovative solutions to specific challenges or problems within a limited timeframe.',
         image: '/images/features/hackathon.jpg'
     },
     {
         id: 2,
         title: 'Investors Lounge',
-        description: 'provides a comfortable and professional environment for investors to meet with potential investment targets, conduct due diligence, and negotiate deals.',
+        description: 'Provides a comfortable and professional environment for investors to meet with potential investment targets, conduct due diligence, and negotiate deals.',
         image: '/images/features/lounge.jpg'
     },
     {
@@ -20,7 +20,7 @@ const features = [
     {
         id: 4,
         title: 'TTS Award',
-        description: 'serves as a motivating factor for individuals and organizations to continue pushing the boundaries of innovation and driving progress in the ever-evolving world of technology.',
+        description: 'Serves as a motivating factor for individuals and organizations to continue pushing the boundaries of innovation and driving progress in the ever-evolving world of technology.',
         image: '/images/features/award.jpg'
     },
     {

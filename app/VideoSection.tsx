@@ -23,7 +23,15 @@ export default function VideoSection() {
             </div>
             <div className="relative w-full h-[300px] sm:h-[550px] bg-[#78e0f4]">
                 {/* <div ref={ref} className="absolute top-0 left-0 w-full h-full"></div> */}
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/o2mwAsFqs64?autoplay=1&mute=1&loop=1&controls=0" title="Afriopia Presents - Tech Trade Show" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe
+                    className="w-full h-full pointer-events-none"
+                    src="https://www.youtube.com/embed/o2mwAsFqs64?autoplay=1&mute=1&loop=1&controls=0&playlist=o2mwAsFqs64"
+                    title="Afriopia Presents - Tech Trade Show"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                >
+                </iframe>
             </div>
         </div>
     </div>

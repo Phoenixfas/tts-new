@@ -5,7 +5,9 @@ import nodemailer from 'nodemailer';
 import QRCode from 'qrcode';
 
 let mailTransporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_TEST_HOST, // Replace with your SMTP server
+    port: 465,                  // Use 465 for SSL or 587 for TLS
+    secure: true,
     auth: {
         user: process.env.EMAIL_TEST_USERNAME,
         pass: process.env.EMAIL_TEST_PWD
@@ -58,7 +60,7 @@ export async function POST(request: NextRequest) {
         });
 
         let mailDetails = {
-            from: '"Afriopia" <afriopiacom@gmail.com>', // sender address
+            from: `"Tech Trade Show" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
             to: newVisitor.email, // list of receivers
             subject: "Tech Trade Show - Registration Confirmation", // Subject line
             text: "", // plain text body

@@ -4,13 +4,15 @@ import Exhibitor from "@/models/Exhibitor";
 import nodemailer from 'nodemailer';
 
 let mailTransporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_TEST_HOST, // Replace with your SMTP server
+    port: 465,                  // Use 465 for SSL or 587 for TLS
+    secure: true,
     auth: {
         user: process.env.EMAIL_TEST_USERNAME,
         pass: process.env.EMAIL_TEST_PWD
     },
     tls: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false, // Bypass certificate validation
     }
 });
 
@@ -34,7 +36,7 @@ export async function POST(request: NextRequest) {
 
         ////////////////////////////////// make a post request to /mail route to send email to vendor//////////////////////////////
         let mailDetails = {
-            from: '"Afriopia" <afriopiacom@gmail.com>', // sender address
+            from: `"Tech Trade Show" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
             to: exhibitor.email, // list of receivers
             subject: "Tech Trade Show - Booth Registration Confirmation and Payment", // Subject line
             text: "", // plain text body

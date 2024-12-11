@@ -16,7 +16,7 @@ export default function BecomeSponsor() {
     const [phone, setPhone] = useState('');
     const [title, setTitle] = useState('Mr');
     const [goal, setGoal] = useState('');
-    const [product_category, setProductCategory] = useState('');
+    // const [product_category, setProductCategory] = useState('');
 
     const [error, setError] = useState('');
 
@@ -26,8 +26,9 @@ export default function BecomeSponsor() {
 
     const onSubmit = async(e: any) => {
         e.preventDefault();
-        if (first_name === '' || last_name === '' || company_name === '' || company_website === '' || email === '' || job_title === '' || phone === '' || title === '' || country === '' || region === '' || goal === '' || product_category === '') {
+        if (first_name === '' || last_name === '' || company_name === '' || company_website === '' || email === '' || job_title === '' || phone === '' || title === '' || country === '' || region === '' || goal === '') {
             setError('Please fill in all required fields');
+            return;
         }
         try {
             const config = {
@@ -44,7 +45,7 @@ export default function BecomeSponsor() {
                     job_title,
                     phone,
                     title,
-                    product_category,
+                    // product_category,
                     country,
                     region,
                     goal
@@ -137,10 +138,10 @@ export default function BecomeSponsor() {
                         <option value="Miss">Miss</option>
                     </select>
                 </div>
-                <div className={style.formInput}>
+                {/* <div className={style.formInput}>
                     <label htmlFor="product_category">Which product category you belong to*</label>
                     <textarea name="product_category" id="product_category" placeholder='(required)' required value={product_category} onChange={(e) => setProductCategory(e.target.value)} />
-                </div>
+                </div> */}
                 <div className={style.formInput}>
                     <label htmlFor="goal">Please choose the goal you would like to accomplish *</label>
                     <select name="goal" id="goal" aria-placeholder='(Required)' required value={goal} onChange={(e) => setGoal(e.target.value)}>

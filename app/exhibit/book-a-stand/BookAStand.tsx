@@ -18,7 +18,7 @@ export default function BookAStand() {
     const [title, setTitle] = useState('Mr');
     const [space_only, setSpaceOnly] = useState('');
     const [shell_scheme, setShellScheme] = useState('');
-    const [product_category, setProductCategory] = useState('');
+    // const [product_category, setProductCategory] = useState('');
 
     const [error, setError] = useState('');
 
@@ -64,8 +64,9 @@ export default function BookAStand() {
 
     const onSubmit = async(e: any) => {
         e.preventDefault();
-        if (first_name === '' || last_name === '' || company_name === '' || company_website === '' || email === '' || job_title === '' || phone === '' || title === '' || country === '' || region === '' || space_only === '' || shell_scheme === '' || product_category === '') {
+        if (first_name === '' || last_name === '' || company_name === '' || company_website === '' || email === '' || job_title === '' || phone === '' || title === '' || country === '' || region === '' ) {
             setError('Please fill in all required fields');
+            return;
         }
         try {
             const config = {
@@ -84,7 +85,7 @@ export default function BookAStand() {
                     title,
                     space_only: space_only + 'm²',
                     shell_scheme: shell_scheme + 'm²',
-                    product_category,
+                    // product_category,
                     country,
                     region
                 })
@@ -169,17 +170,17 @@ export default function BookAStand() {
                     <PhoneInput type="tel" name="phone" id="phone" placeholder='(Required)' required value={phone} onChange={(val: any) => setPhone(val)} />
                 </div>
                 <div className={style.formInput}>
-                    <label htmlFor="space_only">Space Only*</label>
-                    <input type="text" name="space_only" id="space_only" placeholder='m²' required value={space_only} onChange={(e) => setSpaceOnly(e.target.value)} />
+                    <label htmlFor="space_only">Space Only(optional)</label>
+                    <input type="text" name="space_only" id="space_only" placeholder='m²' value={space_only} onChange={(e) => setSpaceOnly(e.target.value)} />
                 </div>
                 <div className={style.formInput}>
-                    <label htmlFor="shell_scheme">Shell Scheme*</label>
-                    <input type="text" name="shell_scheme" id="shell_scheme" placeholder='m²' required value={shell_scheme} onChange={(e) => setShellScheme(e.target.value)} />
+                    <label htmlFor="shell_scheme">Shell Scheme(optional)</label>
+                    <input type="text" name="shell_scheme" id="shell_scheme" placeholder='m²' value={shell_scheme} onChange={(e) => setShellScheme(e.target.value)} />
                 </div>
-                <div className={style.formInput}>
+                {/* <div className={style.formInput}>
                     <label htmlFor="product_category">Which product category you belong to*</label>
                     <textarea name="product_category" id="product_category" placeholder='(required)' required value={product_category} onChange={(e) => setProductCategory(e.target.value)} />
-                </div>
+                </div> */}
                 <div className={style.formSubmit}>
                     <button type="submit">Book</button>
                 </div>

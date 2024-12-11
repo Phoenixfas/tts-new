@@ -4,7 +4,9 @@ import Message from "@/models/Message";
 import nodemailer from 'nodemailer';
 
 let mailTransporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_TEST_HOST, // Replace with your SMTP server
+    port: 465,                  // Use 465 for SSL or 587 for TLS
+    secure: true,
     auth: {
         user: process.env.EMAIL_TEST_USERNAME,
         pass: process.env.EMAIL_TEST_PWD
@@ -24,7 +26,7 @@ export async function POST(request: NextRequest) {
 
         ////////////////////////////////// make a post request to /mail route to send email to vendor//////////////////////////////
         let mailDetails = {
-            from: `"TTS Website" <${message.email}>`, // sender address
+            from: `"TTS Website" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
             to: process.env.EMAIL_TEST_USERNAME, // list of receivers
             subject: "Message from TTS Website", // Subject line
             text: "", // plain text body

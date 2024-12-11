@@ -4,7 +4,9 @@ import Sponsor from "@/models/Sponsor";
 import nodemailer from 'nodemailer';
 
 let mailTransporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_TEST_HOST, // Replace with your SMTP server
+    port: 465,                  // Use 465 for SSL or 587 for TLS
+    secure: true,
     auth: {
         user: process.env.EMAIL_TEST_USERNAME,
         pass: process.env.EMAIL_TEST_PWD
@@ -38,7 +40,7 @@ export async function POST(request: NextRequest) {
         const sponsor = await Sponsor.create(body);
         
         const mailDetails = {
-            from: '"Afriopia" <afriopiacom@gmail.com>',
+            from: `"Tech Trade Show" <${process.env.EMAIL_TEST_USERNAME}>`,
             to: sponsor.email,
             subject: "Tech Trade Show - Sponsorship Registration Confirmation",
             text: "",
