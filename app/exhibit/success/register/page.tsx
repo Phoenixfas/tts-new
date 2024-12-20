@@ -6,9 +6,9 @@ export default function page() {
   return (
     <div className={style.success}>
       <h1>Thank you!</h1>
-      <p>Thank you for your interest in Tech Trade Show. We have sent you a confirmation email with a qr code. Please keep this safe as you will need it to access the event.</p>
+      <p>Thank you for your interest in Tech Trade Show. We have sent you a confirmation email with a QR code. Please keep this safe as you will need it to access the event.</p>
       <p>Below are the contact details for the respective teams should you require direct communication with them.</p>
-      <p><b>Get Support:</b> <Link href={"mailto:support@techtradeshow.tech"}>support@techtradeshow.tech</Link></p>
+      <p><b>Get Support:</b> <Link href={"mailto:support@ttsglobal.tech"}>support@ttsglobal.tech</Link></p>
       <p>Follow us on social media to stay in the loop with the latest industry insights and explore all that Tech Trade Show has to offer.</p>
       <div className={style.success__socials}>
         <Link href={"https://twitter.com/"}><FaXTwitter /></Link>

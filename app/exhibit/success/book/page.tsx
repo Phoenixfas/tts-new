@@ -8,7 +8,7 @@ export default function page() {
       <h1>Thank you!</h1>
       <p>Thank you for your interest in Tech Trade Show. A member of our event team will be in touch with you shortly to address your requirements.</p>
       <p>Below are the contact details for the respective teams should you require direct communication with them.</p>
-      <p><b>Sales & Sponsorship Enquiries:</b> <Link href={"mailto:sales@techtradeshow.tech"}>sales@techtradeshow.tech</Link></p>
+      <p><b>Sales & Sponsorship Enquiries:</b> <Link href={"mailto:sales@ttsglobal.tech"}>sales@ttsglobal.tech</Link></p>
       <p>Follow us on social media to stay in the loop with the latest industry insights and explore all that Tech Trade Show has to offer.</p>
       <div className={style.success__socials}>
         <Link href={"https://twitter.com/"}><FaXTwitter /></Link>

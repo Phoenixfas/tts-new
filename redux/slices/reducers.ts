@@ -19,6 +19,8 @@ import activeSpeakerReducer from "./activeSpeakerSlice";
 import cliblogModalToggleReducer from "./cliBlogModalToggleSlice";
 import activeExhibitorReducer from "./activeExhibitorSlice";
 import activeProfileReducer from "./activeProfileSlice";
+import galleryToggleReducer from "./galleryToggleSlice";
+import activeImageReducer from "./activeImageSlice";
 
 export const rootReducer = combineReducers({
   blogModalToggle: blogModalToggleReducer,
@@ -41,6 +43,8 @@ export const rootReducer = combineReducers({
   cliblogModalToggle: cliblogModalToggleReducer,
   activeExhibitor: activeExhibitorReducer,
   activeProfile: activeProfileReducer,
+  galleryToggle: galleryToggleReducer,
+  activeImage: activeImageReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

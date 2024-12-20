@@ -81,6 +81,7 @@ export default function Navbar() {
                         <span>Learn</span>
                         <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
                             <Link href={"/learn/ethiopia"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">About Ethiopia</Link>
+                            <Link href={"/learn/gallery"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Gallery</Link>
                             <Link href={"/learn/contact"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300">Contact Us</Link>
                         </div>
                     </div>
@@ -135,6 +136,7 @@ export default function Navbar() {
                         <span>Learn</span>
                         <div className="absolute z-[99999999] top-full left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-black border-2 border-[#78e0f4]">
                             <Link href={"/learn/ethiopia"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>About Ethiopia</Link>
+                            <Link href={"/learn/gallery"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Gallery</Link>
                             <Link href={"/learn/contact"} className="p-3  text-[#78e0f4] hover:text-white hover:bg-[#78e0f4] duration-300" onClick={() => toggleMobile()}>Contact Us</Link>
                         </div>
                     </div>

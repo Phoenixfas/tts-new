@@ -6,10 +6,11 @@ const conferenceAgenda = [
         activities: [
             {
                 id: 1,
-                name: "Addressing Healthcare Disparities in Rural Areas: Strategies for Improving Access to Medical Services in Kigali and Beyond",
+                name: "Fintech",
                 time: "10 AM – 11 AM",
                 image: "https://picsum.photos/200/300",
-                format: "Open for Registered Startups Name tag with industry tag to be issued for registered stratups and confirmed corporates",
+                format: "Evaluating the impact of international bank entry on the local fintech ecosystem and banking sector.",
+                type: "Panel Discussion",
                 moderator: "Tigist G. Araya & Dawit K. Aberra",
                 setup: "setup as picture above without highchair",
                 description: `
@@ -23,15 +24,17 @@ const conferenceAgenda = [
                     startups: "Health/MedTech, AgriTech, FinTech, EduTech, Transportation Technology (contact point: online registration)",
                     corporates: "Agriculture, Education (Primary +Tertiary), Financial sector (Bank, Insurance, Microfinance), Logistic companies, Hospitals, Diagnostic centers, Clinics (contact point: Target list+ invitation letter+ active participation confirmation) "
                 },
-                order: "1"
+                order: "1",
+                day: "1",
 
             },
             {
                 id: 2,
-                name: "Elevating Healthcare Infrastructure: Advancing Quality and Accessibility in Kigali's Medical Facilities",
+                name: "Agritech",
                 time: "3 PM – 4 PM",
                 image: "https://picsum.photos/200/300",
-                format: "Open for Registered Startups",
+                format: "Smart Agriculture: Shaping the future of farming & food systems",
+                type: "Panel Discussion",
                 invited_panelists: "Renew Strategies, Cepheus, Kazana Fund, AAA, Zoscales, 54 Capital, Novastar",
                 moderator: "TBC",
                 setup: "Panel setup with audience (as picture Above)",
@@ -47,7 +50,8 @@ const conferenceAgenda = [
                     corporates: "",
                     other: "Registered startups and audience + invited Panelists"
                 },
-                order: "2"
+                order: "2",
+                day: "1",
 
             }
         ]
@@ -59,10 +63,11 @@ const conferenceAgenda = [
         activities: [
             {
                 id: 1,
-                name: "Strengthening the Healthcare Workforce: Addressing Shortages and Improving Patient Care in Kigali and Beyond",
+                name: "Healthtech",
                 time: "10 AM – 11 AM",
                 image: "https://picsum.photos/200/300",
-                format: "Application open for Startups  with pitch deck to be sent to contact@arayaventurelab.com 20 startups will be shorlisted + 20 handpicked investors will be invited ",
+                format: "Transforming healthcare through digitalization: Overcoming challenges",
+                type: "Fireside Chat",
                 moderator: "TBC",
                 setup: "Panel setup with audience (as picture above with 20 highchairs for the investors)",
                 description: `
@@ -78,15 +83,17 @@ const conferenceAgenda = [
                     other: "startups who applied and shortlisted + invited Investors"
                 },
                 button: "Apply Now",
-                order: "3"
+                order: "3",
+                day: "2",
 
             },
             {
                 id: 2,
-                name: "Tackling the Burden of Infectious Diseases in Kigali: Strategies for Sustainable Healthcare Resource Allocation",
+                name: "Artificial Intelligence",
                 time: "3 PM – 4 PM",
                 image: "https://picsum.photos/200/300",
-                format: "Open for Registered audience, 5 shorlisted Startups, 5 Selected Investors ",
+                format: "The role of Generative AI in Shaping the future of Government services.",
+                type: "Panel Discussion",
                 moderator: "TBC",
                 setup: "Shark Tank-like setup with audience  (see piture above)",
                 description: `
@@ -104,7 +111,8 @@ const conferenceAgenda = [
                     corporates: "",
                     other: "startups who were shortlisted +5 selected Investors + Audience who registered"
                 },
-                order: "4"
+                order: "4",
+                day: "2",
 
             }
         ]
@@ -116,10 +124,11 @@ const conferenceAgenda = [
         activities: [
             {
                 id: 1,
-                name: "Empowering Maternal and Child Health: Overcoming Barriers to Access and Reducing Mortality Rates in Kigali and Beyond",
+                name: "Blockchain",
                 time: "10 AM – 11 AM",
                 image: "https://picsum.photos/200/300",
-                format: "Open for Registered Startups to be part of the audience Invited Panelist: MasterCard Foundation or GIZ (Grant), Renew Strategies (VC), Cepheus (PE), Loan (Dashen Bank)Kazana Group, Addis Alemayehu (Angel), Waryt, Tihitena Mulushewa Legesse (Family Office), Yegara/MoLSA, Alemtsehay (Crowdfunding), Mela Financials, Adam Dagne ('Ekub') (invitation letter + connection)",
+                format: "Blockchain impact on the digital economy.",
+                type: "Fireside Chat",
                 moderator: "Tigist G.A",
                 setup: "Panel setup with audience (as picture below) ",
                 description: `This panel discussion will revolve around the critical issues concerning maternal and child health, with a specific focus on Kigali, Rwanda, and similar regions. The panelists will engage in a comprehensive examination of the challenges related to maternal and child health, including limited access to prenatal and postnatal care and the persistently high maternal and infant mortality rates. The discussion will explore evidence-based strategies, community engagement, and healthcare policies aimed at improving maternal and child health outcomes. Panelists will share insights into successful interventions and programs that have made a positive impact in Kigali and other areas. Additionally, the panel will emphasize the importance of collaboration among healthcare providers, government agencies, and community stakeholders to ensure equitable access to quality maternal and child healthcare services. By addressing these issues, the panel seeks to contribute to the advancement of maternal and child health and the reduction of mortality rates, not only in Kigali but in similar regions globally.`,
@@ -128,15 +137,17 @@ const conferenceAgenda = [
                     corporates: "",
                     other: "Registered startups and audience + invited Panelists"
                 },
-                order: "5"
+                order: "5",
+                day: "3",
 
             },
             {
                 id: 2,
-                name: "Bridging the Gap: Fostering Health Education and Awareness for Preventable Disease Control in Underserved Communities",
+                name: "Cybersecurity",
                 time: "3 PM – 4 PM",
                 image: "https://picsum.photos/200/300",
-                format: "Open for any registered person",
+                format: "Strengthening financial cybersecurity: leveraging AI for better fraud detection",
+                type: "Panel Discussion",
                 moderator: "Andlaye team",
                 setup: "setup as picture above without highchair",
                 description: `This panel discussion will explore the pressing issue of inadequate health education and awareness in certain communities, with a particular emphasis on its potential contribution to preventable diseases and health challenges. The panelists will delve into the root causes of limited health education and awareness, including socioeconomic factors, cultural barriers, and access to information. They will discuss the impact of this deficit on public health and the increased risk of preventable diseases. Moreover, the panel will showcase successful initiatives, community-based programs, and innovative strategies that have effectively addressed this challenge in various contexts, including Kigali and similar regions. The discussion will highlight the importance of collaboration between healthcare providers, educators, community leaders, and policymakers to empower individuals with the knowledge and resources needed for better health outcomes. By addressing the issue of inadequate health education, the panel aims to inspire actionable solutions that can improve the health and well-being of underserved communities.`,
@@ -145,7 +156,65 @@ const conferenceAgenda = [
                     corporates: "",
                     other: "Any registered person"
                 },
-                order: "6"
+                order: "6",
+                day: "3",
+
+            },
+            {
+                id: 3,
+                name: "E-commerce",
+                time: "3 PM – 4 PM",
+                image: "https://picsum.photos/200/300",
+                format: "Navigating the future of E-commerce: Innovations, Consumer Behavior & Global Trends",
+                type: "Panel Discussion",
+                moderator: "Andlaye team",
+                setup: "setup as picture above without highchair",
+                description: `This panel discussion will explore the pressing issue of inadequate health education and awareness in certain communities, with a particular emphasis on its potential contribution to preventable diseases and health challenges. The panelists will delve into the root causes of limited health education and awareness, including socioeconomic factors, cultural barriers, and access to information. They will discuss the impact of this deficit on public health and the increased risk of preventable diseases. Moreover, the panel will showcase successful initiatives, community-based programs, and innovative strategies that have effectively addressed this challenge in various contexts, including Kigali and similar regions. The discussion will highlight the importance of collaboration between healthcare providers, educators, community leaders, and policymakers to empower individuals with the knowledge and resources needed for better health outcomes. By addressing the issue of inadequate health education, the panel aims to inspire actionable solutions that can improve the health and well-being of underserved communities.`,
+                participants_expected: {
+                    startups: "",
+                    corporates: "",
+                    other: "Any registered person"
+                },
+                order: "6",
+                day: "3",
+
+            },
+            {
+                id: 4,
+                name: "Smart City",
+                time: "3 PM – 4 PM",
+                image: "https://picsum.photos/200/300",
+                format: "Creating resilient & sustainable economies with Smart CityIn innovations.",
+                type: "Panel Discussion",
+                moderator: "Andlaye team",
+                setup: "setup as picture above without highchair",
+                description: `This panel discussion will explore the pressing issue of inadequate health education and awareness in certain communities, with a particular emphasis on its potential contribution to preventable diseases and health challenges. The panelists will delve into the root causes of limited health education and awareness, including socioeconomic factors, cultural barriers, and access to information. They will discuss the impact of this deficit on public health and the increased risk of preventable diseases. Moreover, the panel will showcase successful initiatives, community-based programs, and innovative strategies that have effectively addressed this challenge in various contexts, including Kigali and similar regions. The discussion will highlight the importance of collaboration between healthcare providers, educators, community leaders, and policymakers to empower individuals with the knowledge and resources needed for better health outcomes. By addressing the issue of inadequate health education, the panel aims to inspire actionable solutions that can improve the health and well-being of underserved communities.`,
+                participants_expected: {
+                    startups: "",
+                    corporates: "",
+                    other: "Any registered person"
+                },
+                order: "6",
+                day: "3",
+
+            },
+            {
+                id: 5,
+                name: "Interview",
+                time: "3 PM – 4 PM",
+                image: "https://picsum.photos/200/300",
+                format: "From startup to unicorn: Strategies, challenges, and lessons learned on the path to billion-dollar valuation.",
+                type: "Panel Discussion",
+                moderator: "Andlaye team",
+                setup: "setup as picture above without highchair",
+                description: `This panel discussion will explore the pressing issue of inadequate health education and awareness in certain communities, with a particular emphasis on its potential contribution to preventable diseases and health challenges. The panelists will delve into the root causes of limited health education and awareness, including socioeconomic factors, cultural barriers, and access to information. They will discuss the impact of this deficit on public health and the increased risk of preventable diseases. Moreover, the panel will showcase successful initiatives, community-based programs, and innovative strategies that have effectively addressed this challenge in various contexts, including Kigali and similar regions. The discussion will highlight the importance of collaboration between healthcare providers, educators, community leaders, and policymakers to empower individuals with the knowledge and resources needed for better health outcomes. By addressing the issue of inadequate health education, the panel aims to inspire actionable solutions that can improve the health and well-being of underserved communities.`,
+                participants_expected: {
+                    startups: "",
+                    corporates: "",
+                    other: "Any registered person"
+                },
+                order: "6",
+                day: "3",
 
             }
         ]

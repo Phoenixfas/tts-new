@@ -16,7 +16,7 @@ export default function CAgenda() {
     }, [conferenceAgenda]);
 
     const getFullDay = (order: string) => {
-        const day = conferenceAgenda.find((day) => day.activities.find((act) => act.order === order));
+        const day = conferenceAgenda.find((agd) => agd.activities.find((act) => act.order === order));
         return day;
     }
 
@@ -25,10 +25,10 @@ export default function CAgenda() {
             <div className="w-full flex flex-col gap-5">
 
                 {agendas.map((agenda, index) => (
-                    <div key={index} className="p-3 flex flex-col gap-7 border border-[#050752] rounded-md text-white">
+                    <div key={index} id={`day-${agenda.day}`} className="p-3 flex flex-col gap-7 border border-[#050752] rounded-md text-white">
                         <div className="flex items-center gap-3">
                             <div className="p-1 rounded-sm bg-[#4EAEE5]">{agenda.time}</div>
-                            <div className="">{getFullDay(agenda?.order)?.date}</div>
+                            <div className="text-[#050752]">{getFullDay(agenda?.order)?.date}</div>
                         </div>
                         <div className="p-1 rounded-sm bg-[#78E0F4] w-fit text-[#050752]">{agenda.name}</div>
                         <div className="flex flex-col gap-2 text-[#050752]">
@@ -36,9 +36,13 @@ export default function CAgenda() {
                             {/* <div dangerouslySetInnerHTML={{__html: agenda?.description}}></div> */}
                         </div>
                         <div className="flex flex-col gap-2 text-[#050752]">
+                            <h3 className="font-bold uppercase">Type</h3>
+                            <p>{agenda.type}</p>
+                        </div>
+                        {/* <div className="flex flex-col gap-2 text-[#050752]">
                             <h3 className="font-bold uppercase">Moderators</h3>
                             <p>{agenda.moderator}</p>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
 
