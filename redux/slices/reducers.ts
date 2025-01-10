@@ -21,6 +21,7 @@ import activeExhibitorReducer from "./activeExhibitorSlice";
 import activeProfileReducer from "./activeProfileSlice";
 import galleryToggleReducer from "./galleryToggleSlice";
 import activeImageReducer from "./activeImageSlice";
+import confDayReducer from "./confDaySlice";
 
 export const rootReducer = combineReducers({
   blogModalToggle: blogModalToggleReducer,
@@ -45,6 +46,7 @@ export const rootReducer = combineReducers({
   activeProfile: activeProfileReducer,
   galleryToggle: galleryToggleReducer,
   activeImage: activeImageReducer,
+  confDay: confDayReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

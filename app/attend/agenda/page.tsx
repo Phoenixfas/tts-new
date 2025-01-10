@@ -3,6 +3,7 @@ import React from 'react'
 import DateWidget from './DateWidget'
 import CAgenda from './CAgenda'
 import { Metadata } from 'next'
+import DownBtn from './DownBtn'
 // import ParticlesBg from '@/components/ParticlesBg'
 
 export const metadata: Metadata = {
@@ -14,8 +15,9 @@ export default function page() {
   return (
     <div className='relative w-full min-h-[100vh]'>
         {/* <ParticlesBg color="#78e0f4" amount={100} /> */}
-        <Hero img='/images/features/conference.JPG' title='Conference Agenda' />
+        <Hero img='/images/features/conference.jpg' title='Conference Agenda' />
         <DateWidget />
+        <DownBtn />
         <CAgenda />
     </div>
   )
