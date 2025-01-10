@@ -15,7 +15,7 @@ export default function page() {
   return (
     <div className='relative w-full min-h-[100vh]'>
         {/* <ParticlesBg color="#78e0f4" amount={100} /> */}
-        <Hero img='/images/features/conference.jpg' title='Conference Agenda' />
+        <Hero img='/images/pageshero/visitors.JPG' title='Conference Agenda' />
         <DateWidget />
         <DownBtn />
         <CAgenda />
