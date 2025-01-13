@@ -39,7 +39,12 @@ const conferenceAgenda = [
             day: "1",
             time: "10:30-11:30",
             location: "Main Hall",
-            activity: "Panel Discussion 1",
+            activityDetails: {
+              name: "Fintech",
+              desc: "Evaluating the impact of international bank entry on the local fintech ecosystem and banking sector.",
+              type: "Panel Discussion",
+              moderator: "Tigist G. Araya & Dawit K. Aberra",
+            }
           },
           {
             day: "1",
@@ -82,7 +87,12 @@ const conferenceAgenda = [
             day: "1",
             time: "14:30-15:30",
             location: "Main Hall",
-            activity: "Panel Discussion 2",
+            activityDetails: {
+              name: "Agritech",
+              desc: "Smart Agriculture: Shaping the future of farming & food systems",
+              type: "Panel Discussion",
+              moderator: "TBC",
+            }
           },
           {
             day: "1",
@@ -131,7 +141,12 @@ const conferenceAgenda = [
             day: "2",
             time: "10:30-11:30",
             location: "Main Hall",
-            activity: "Panel Discussion 3",
+            activityDetails: {
+              name: "Artificial Intelligence",
+              desc: "The role of Generative AI in Shaping the future of Government services.",
+              type: "Panel Discussion",
+              moderator: "TBC",
+            }
           },
           {
             day: "2",
@@ -164,7 +179,12 @@ const conferenceAgenda = [
             day: "2",
             time: "14:30-15:30",
             location: "Main Hall",
-            activity: "Panel Discussion 4",
+            activityDetails: {
+              name: "Cybersecurity",
+              desc: "Strengthening financial cybersecurity: leveraging AI for better fraud detection",
+              type: "Panel Discussion",
+              moderator: "Andlaye team",
+            }
           },
           {
             day: "2",
@@ -213,7 +233,12 @@ const conferenceAgenda = [
             day: "3",
             time: "10:30-11:30",
             location: "Main Hall",
-            activity: "Panel Discussion 5",
+            activityDetails: {
+              name: "E-commerce",
+              desc: "Navigating the future of E-commerce: Innovations, Consumer Behavior & Global Trends",
+              type: "Panel Discussion",
+              moderator: "Andlaye team",
+            }
           },
           {
             day: "3",

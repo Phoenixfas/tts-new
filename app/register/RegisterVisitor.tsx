@@ -21,6 +21,9 @@ export default function RegisterVisitor() {
     const [country, setCountry] = useState('');
     const [region, setRegion] = useState('');
 
+    const [vipAvailable, setVipAvailable] = useState(false);
+    const [passType, setPassType] = useState('free');
+
 
     const onSubmit = async(e: any) => {
         e.preventDefault();
@@ -43,7 +46,8 @@ export default function RegisterVisitor() {
                     phone,
                     title,
                     country,
-                    region
+                    region,
+                    passType
                 })
             }
             
@@ -57,9 +61,11 @@ export default function RegisterVisitor() {
             // if (data.capacity === 'full') {
             //     window.location.href = '/booking-full';
             // } 
-            else {
-                window.location.href = '/exhibit/success/register';
+            if (passType === 'paid') {
+                window.location.href = data.url;
             }
+            window.location.href = '/exhibit/success/register';
+            
         } catch (err) {
             console.error(err);
             setError('Something went wrong, You might be already registered. please try again later.');
@@ -68,21 +74,20 @@ export default function RegisterVisitor() {
 
     // send a get request to the server to check if booking is full and redirect to /booking-full if it is
     useEffect(() => {
-        // const checkBooking = async() => {
-        //     try {
-        //         const res = await fetch('https://api.afriopia.com/booth/capacity');
-        //         const data = await res.json();
-        //         if (data.capacity === 'full') {
-        //             window.location.href = '/booking-full';
-        //         }
-        //     } catch (err) {
-        //         console.error(err);
-        //     }
-        // }
-        // checkBooking();
-        console.log(country);
-    }, [country])
-
+        const checkVip = async() => {
+            try {
+                const res = await fetch('/api/checkVip');
+                const data = await res.json();
+                if (data.success) {
+                    setVipAvailable(true);
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        checkVip();
+    }, [])
+    
   return (
     <div style={{minHeight: "100vh", paddingTop: "150px"}} className={style.booking}>
         {/* <div className={style.bookingInfo}>
@@ -137,6 +142,14 @@ export default function RegisterVisitor() {
                 <div className={style.formInput}>
                     <label htmlFor="phone">Phone*</label>
                     <PhoneInput type="tel" name="phone" id="phone" placeholder='(Required)' required value={phone} onChange={(val: any) => setPhone(val)} />
+                </div>
+                <div className={`${style.formInput} w-full`}>
+                    <label htmlFor="passType">Pass Type*</label>
+                    <p className='mb-5 text-yellow-200'>Free pass includes access to the exhibition hall and all free-to-attend event sessions. VIP pass includes access to the exhibition hall, all conference sessions, and exclusive panel discussions.</p>
+                    <select name="passType" id="passType" onChange={(e: any) => setPassType(e.target.value)}>
+                        <option value="free">Free</option>
+                        <option value="paid" disabled={!vipAvailable} >VIP {vipAvailable ? "(Available)" : "(Fully Booked)"}</option>
+                    </select>
                 </div>
                 <div className={style.formSubmit}>
                     <button type="submit">Register</button>

@@ -3,6 +3,7 @@ import dbConnect from "@/lib/db";
 import Visitor from "@/models/Visitor";
 import nodemailer from 'nodemailer';
 import QRCode from 'qrcode';
+import axios from "axios";
 
 let mailTransporter = nodemailer.createTransport({
     host: process.env.EMAIL_TEST_HOST, // Replace with your SMTP server
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest) {
     try {    
         await dbConnect();
         const body = await request.json();
-        const { email } = body;
+        const { email, passType } = body;
         
         const visitor = await Visitor.findOne({ email });
 
@@ -70,6 +71,9 @@ export async function POST(request: NextRequest) {
 
         // Parse the JSON response
         const imgData = await imgResponse.json();
+
+        const res = await axios.post('/api/createCheckoutSession', { id: newVisitor.id });
+        
 
         let mailDetails = {
             from: `"Tech Trade Show" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
@@ -350,7 +354,7 @@ export async function POST(request: NextRequest) {
                             <div class="ticket-l">
                                 <h2>Ticket Details</h2>
                                 <p><b>Full Name:</b> ${newVisitor.first_name + " " + newVisitor.last_name}</p>
-                                <p><b>Badge Category:</b> Visitor Pass</p>
+                                <p><b>Badge Category:</b> ${passType === "free" ? "Free Pass" : "VIP Pass (Paid)"}</p>
                                 <p><b>Email:</b> ${newVisitor.email}</p>
                             </div>
                             <div class="ticket-r">
@@ -358,6 +362,8 @@ export async function POST(request: NextRequest) {
                             </div>
                         </div>
 
+                        <p> Note: If you've applied for a VIP Pass and completed payment, you will receive another email confirming your vip ticket purchase. otherwise please proceed to make the payment to secure your ticket.</p>
+                        <p> Want to upgrade to a VIP Pass? <a href="${res.data.url}">Click here</a></p>
                         <p class="ticket-note">Please present this ticket at the registration desk upon arrival. If you have any questions or need assistance, please contact us at <a href="mailto:support@ttsglobal.tech">support@ttsglobal.tech</a>.</p>
 
                         <div class="event-details">
@@ -438,6 +444,13 @@ export async function POST(request: NextRequest) {
                 console.log('Email sent successfully');
             }
         });
+
+        if (passType === 'paid') {
+            return NextResponse.json({
+                success: true,
+                url: res.data.url
+            }, { status: 200 });
+        }
         
         return NextResponse.json({
             success: true,

@@ -51,10 +51,20 @@ export default function CAgenda() {
                             <div className="p-1 rounded-sm bg-[#4EAEE5]">{agenda.time}</div>
                             <div className="text-[#050752]">{getFullDay(agenda?.day)?.date}</div>
                         </div>
-                        {agenda.location && <div className={`relative flex items-center gap-3 p-3 rounded-lg ${locColor(agenda.location)}`}>
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-r-none text-white">{agenda.location === "Main Hall" ? "Paid" : "Free"}</div>
-                            <div className={`p-2 rounded-md bg-white w-fit text-[#050752] flex items-center gap-1`}><MdLocationPin /> {agenda.location}</div>
-                            <div className="w-fit text-[#050752]">{agenda.activity}</div>
+                        {agenda.location && <div className={`relative flex flex-col gap-3 ${agenda.activityDetails && "p-3 border border-[#050752] rounded-md"}`}>
+                            <div className={`relative flex items-center gap-3 p-3 rounded-lg ${locColor(agenda.location)}`}>
+                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-r-none text-white">{agenda.location === "Main Hall" ? "Paid" : "Free"}</div>
+                                <div className={`p-2 rounded-md bg-white w-fit text-[#050752] flex items-center gap-1`}><MdLocationPin /> {agenda.location}</div>
+                                <div className="w-fit text-[#050752]">{agenda.activity}</div>
+                                <div className="w-fit text-[#050752]">{agenda.activityDetails?.type}</div>
+                            </div>
+                            {agenda.activityDetails && <div className="flex flex-col gap-2 text-[#050752]">
+                                <h3 className="font-bold text-2xl">{agenda.activityDetails.name}</h3>
+                                <p>{agenda.activityDetails.desc}</p>
+                                
+                                <h3 className="font-bold uppercase">Moderator</h3>
+                                <p>{agenda.activityDetails.moderator}</p>
+                            </div>}
                         </div>}
                         {agenda.locations && agenda.locations.map((loc: any, index: any) => (
                             <div key={index} className={`relative flex items-center gap-3 p-3 rounded-lg ${locColor(loc.area)}`} >

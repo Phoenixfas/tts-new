@@ -34,6 +34,17 @@ const visitorSchema = new Schema({
     region: {
         type: String,
     },
+    passType: {
+        type: String,
+        default: 'free'
+    },
+    paymentStatus: {
+        type: String,
+        default: 'pending'
+    },
+    paymentDetails: {
+        type: Object,
+    }
 }, {
     timestamps: true
 });
