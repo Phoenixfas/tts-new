@@ -52,8 +52,8 @@ export default function CAgenda() {
                             <div className="text-[#050752]">{getFullDay(agenda?.day)?.date}</div>
                         </div>
                         {agenda.location && <div className={`relative flex flex-col gap-3 ${agenda.activityDetails && "p-3 border border-[#050752] rounded-md"}`}>
-                            <div className={`relative flex items-center gap-3 p-3 rounded-lg ${locColor(agenda.location)}`}>
-                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-r-none text-white">{agenda.location === "Main Hall" ? "Paid" : "Free"}</div>
+                            <div className={`relative flex flex-col md:flex-row md:items-center gap-3 p-3 rounded-lg ${locColor(agenda.location)}`}>
+                                <div className="relative md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-l-none md:rounded-l-full md:rounded-r-none text-[#050752] bg-white">{agenda.location === "Main Hall" ? "Paid" : "Free"}</div>
                                 <div className={`p-2 rounded-md bg-white w-fit text-[#050752] flex items-center gap-1`}><MdLocationPin /> {agenda.location}</div>
                                 <div className="w-fit text-[#050752]">{agenda.activity}</div>
                                 <div className="w-fit text-[#050752]">{agenda.activityDetails?.type}</div>
@@ -67,8 +67,8 @@ export default function CAgenda() {
                             </div>}
                         </div>}
                         {agenda.locations && agenda.locations.map((loc: any, index: any) => (
-                            <div key={index} className={`relative flex items-center gap-3 p-3 rounded-lg ${locColor(loc.area)}`} >
-                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-r-none text-white">{loc.area === "Main Hall" ? "Paid" : "Free"}</div>
+                            <div key={index} className={`relative flex flex-col md:flex-row md:items-center gap-3 p-3 rounded-lg ${locColor(loc.area)}`} >
+                                <div className="relative md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-fit px-5 py-1 border-2 border-white border-r-0 rounded-full rounded-l-none md:rounded-l-full md:rounded-r-none text-[#050752] bg-white">{loc.area === "Main Hall" ? "Paid" : "Free"}</div>
                                 <div className={`p-2 rounded-md bg-white w-fit text-[#050752] text-lg flex items-center gap-1`}><MdLocationPin /> {loc.area}</div>
                                 <div className=" w-fit text-[#050752]">{loc.activity}</div>
                             </div>
