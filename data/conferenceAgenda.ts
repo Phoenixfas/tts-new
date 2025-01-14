@@ -43,7 +43,7 @@ const conferenceAgenda = [
               name: "Fintech",
               desc: "Evaluating the impact of international bank entry on the local fintech ecosystem and banking sector.",
               type: "Panel Discussion",
-              moderator: "Tigist G. Araya & Dawit K. Aberra",
+              moderator: "Tigist G. Araya",
             }
           },
           {
