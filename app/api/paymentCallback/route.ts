@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
             }
         });
         const newTransaction = await Transaction.create(body);
-        console.log("callback body: " + body);
+        console.log("callback body: " + JSON.stringify(body));
 
         // Update the visitor's payment status and details
 
