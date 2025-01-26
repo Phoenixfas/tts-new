@@ -3,42 +3,42 @@ import mongoose from 'mongoose';
 const TransactionSchema = new mongoose.Schema({
   txnId: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   created_at: {
     type: Date,
-    required: true,
+    // required: true,
     default: Date.now,
   },
   updated_at: {
     type: Date,
-    required: true,
+    // required: true,
     default: Date.now,
   },
   thirdPartyId: {
     type: String,
-    required: true,
+    // required: true,
   },
   merId: {
     type: String,
-    required: true,
+    // required: true,
   },
   merName: {
     type: String,
-    required: true,
+    // required: true,
   },
   address: {
     type: String,
-    required: true,
+    // required: true,
   },
   amount: {
     type: String,
-    required: true,
+    // required: true,
   },
   currency: {
     type: String,
-    required: true,
+    // required: true,
   },
   reason: {
     type: String,
@@ -53,28 +53,28 @@ const TransactionSchema = new mongoose.Schema({
   },
   paymentVia: {
     type: String,
-    required: true,
+    // required: true,
   },
   refId: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   successRedirectUrl: {
     type: String,
-    required: true,
+    // required: true,
   },
   failureRedirectUrl: {
     type: String,
-    required: true,
+    // required: true,
   },
   message: {
     type: String,
-    required: true,
+    // required: true,
   },
   status: {
     type: String,
-    required: true,
+    // required: true,
     // enum: ["COMPLETED", "FAILED", "PENDING"], // Add other statuses as needed
   },
   receiverWalletID: {
