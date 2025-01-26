@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
         if (!publicKey) {
             throw new Error('Public key is missing');
         }
-        const verifiedPayload = jwt.verify(signedToken, publicKey, { algorithms: ['ES256'] });
+        // const verifiedPayload = jwt.verify(signedToken, publicKey, { algorithms: ['ES256'] });
 
         // Process the transaction based on `req.body`
 
