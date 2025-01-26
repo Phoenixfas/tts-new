@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
         if (!publicKey) {
             throw new Error('Public key is missing');
         }
-        // const verifiedPayload = jwt.verify(signedToken, publicKey, { algorithms: ['ES256'] });
+        const verifiedPayload = jwt.verify(signedToken, publicKey, { algorithms: ['ES256'] });
 
         // Process the transaction based on `req.body`
 
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
             }
         });
         const newTransaction = await Transaction.create(body);
-        console.log("callback body: " + JSON.stringify(body));
+        console.log("verified paylod: " + JSON.stringify(verifiedPayload));
 
         // Update the visitor's payment status and details
 
