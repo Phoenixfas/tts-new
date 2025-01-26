@@ -72,8 +72,18 @@ export async function POST(request: NextRequest) {
         // Parse the JSON response
         const imgData = await imgResponse.json();
 
-        const res = await axios.post('/api/createCheckoutSession', { id: newVisitor.id });
-        
+        const resData = await fetch(`${process.env.PUBLIC_BASE_URL}/api/createCheckoutSession`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                id: newVisitor.id, 
+                phone: newVisitor.phone 
+            }),
+        });
+
+        const res = await resData.json();
 
         let mailDetails = {
             from: `"Tech Trade Show" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
@@ -363,7 +373,7 @@ export async function POST(request: NextRequest) {
                         </div>
 
                         <p> Note: If you've applied for a VIP Pass and completed payment, you will receive another email confirming your vip ticket purchase. otherwise please proceed to make the payment to secure your ticket.</p>
-                        <p> Want to upgrade to a VIP Pass? <a href="${res.data.url}">Click here</a></p>
+                        <p> Want to upgrade to a VIP Pass? <a href="${res.url}">Click here</a></p>
                         <p class="ticket-note">Please present this ticket at the registration desk upon arrival. If you have any questions or need assistance, please contact us at <a href="mailto:support@ttsglobal.tech">support@ttsglobal.tech</a>.</p>
 
                         <div class="event-details">
@@ -448,7 +458,7 @@ export async function POST(request: NextRequest) {
         if (passType === 'paid') {
             return NextResponse.json({
                 success: true,
-                url: res.data.url
+                url: res.url
             }, { status: 200 });
         }
         
@@ -457,6 +467,7 @@ export async function POST(request: NextRequest) {
             data: newVisitor
         }, { status: 200 });
     } catch (error) {
+        console.log(error);
         return NextResponse.json({
             success: false,
             message: "Error Occured: " + error

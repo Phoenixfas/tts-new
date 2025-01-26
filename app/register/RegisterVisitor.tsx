@@ -5,8 +5,10 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import { loadStripe } from '@stripe/stripe-js';
+import { useRouter } from 'next/navigation'
 
 export default function RegisterVisitor() {
+    const router = useRouter();
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
     const [company_name, setCompanyName] = useState('');
@@ -62,9 +64,10 @@ export default function RegisterVisitor() {
             //     window.location.href = '/booking-full';
             // } 
             if (passType === 'paid') {
-                window.location.href = data.url;
+                router.push(data.url);
+                return;
             }
-            window.location.href = '/exhibit/success/register';
+            router.push('/exhibit/success/register');
             
         } catch (err) {
             console.error(err);
