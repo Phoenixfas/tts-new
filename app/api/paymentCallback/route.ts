@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     const signedToken = request.headers.get('signed-token');
     
     if (!process.env.SANTIMPAY_PUBLIC_KEY) {
-        throw new Error('SANTIMPAY_PUBLIC_KEY is not defined');
+        throw new Error('payment public key is not defined');
     }
 
     const publicKey = Buffer.from(process.env.SANTIMPAY_PUBLIC_KEY, 'base64').toString('utf8');

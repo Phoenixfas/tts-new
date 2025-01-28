@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
     const securedGetRoutes = ['/api/administrator/me', '/api/subscribers', '/api/visitors'];
     const securedPutRoutes = ['/api/exhibitors', '/api/news', '/api/partners', '/api/profile', '/api/speakers', '/api/sponsors']
     const securedDeleteRoutes = ['/api/exhibitors', '/api/news', '/api/partners', '/api/speakers', '/api/sponsors', '/api/subscribers', '/api/visitors']
-    const excludedRoutes = ['/api/administrator/login', '/api/message', '/api/check-in']
+    const excludedRoutes = ['/api/administrator/login', '/api/message', '/api/check-in', '/api/createCheckoutSession', '/api/checkVip', '/api/paymentCallback']
 
     // Exclude routes
     if (excludedRoutes.includes(pathname)) {
