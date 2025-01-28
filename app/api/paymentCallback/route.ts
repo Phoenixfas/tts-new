@@ -22,6 +22,36 @@ let mailTransporter = nodemailer.createTransport({
 export async function POST(request: NextRequest) {
     const signedToken = request.headers.get('signed-token');
     
+    // //////////////////// Testing Code /////////////////////////
+    console.log(signedToken);
+    // try {
+    //     let mailDetailsTest = {
+    //         from: `"TTS" <${process.env.EMAIL_TEST_USERNAME}>`, // sender address
+    //         to: 'woodhulabe123@gmail.com', // list of receivers
+    //         subject: "TTS - Test", // Subject line
+    //         text: "", // plain text body
+    //         html: `
+    //             <!DOCTYPE html>
+    //             <html>
+    //             <body>
+    //                 <h1>Testing</h1>
+    //                 <p>signed token: ${signedToken}</p>
+    //             </body>
+    //             </html>
+    //     `};
+    //     mailTransporter.sendMail(mailDetailsTest, function (err, data) {
+    //         if (err) {
+    //             console.log('Error Occurs:', err);
+    //         } else {
+    //             console.log('Test Email sent successfully');
+    //         }
+    //     });
+    // } catch (error: any) {
+    //     console.error('Error in callback:', error.message);
+    // }
+
+    // /////////////////////////////////////////////
+    
     if (!process.env.SANTIMPAY_PUBLIC_KEY) {
         throw new Error('payment public key is not defined');
     }
