@@ -18,6 +18,11 @@ let mailTransporter = nodemailer.createTransport({
 export async function POST(request: NextRequest) {
     const body = await request.json();
 
+    // check if the request body is empty
+    if (!body) {
+        return NextResponse.json('Request body is empty', { status: 400 });
+    }
+    
     try {
 
         // Generate QR code as a buffer
