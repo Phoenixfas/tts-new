@@ -21,7 +21,7 @@ let mailTransporter = nodemailer.createTransport({
 
 export async function POST(request: NextRequest) {
     const signedToken = request.headers.get('signed-token');
-    
+    console.log(signedToken);
     if (!process.env.SANTIMPAY_PUBLIC_KEY) {
         throw new Error('payment public key is not defined');
     }
