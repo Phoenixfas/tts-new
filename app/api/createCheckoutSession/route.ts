@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     const reason = 'Payment for Tech Trade Show 2025 VIP Pass Ticket';
     const successRedirectUrl = `${process.env.PUBLIC_BASE_URL}/exhibit/success/vip/success`;
     const failureRedirectUrl = `${process.env.PUBLIC_BASE_URL}/exhibit/success/vip/failed`;
-    const notifyUrl = process.env.PAYMENT_CALLBACK_URL;
+    const notifyUrl = `${process.env.PUBLIC_BASE_URL}/api/paymentCallback`;
     const cancelRedirectUrl = `${process.env.PUBLIC_BASE_URL}/exhibit/success/vip/canceled`;
 
     const test_url = 'https://testnet.santimpay.com/api/v1/gateway/initiate-payment'
