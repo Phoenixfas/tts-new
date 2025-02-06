@@ -19,6 +19,7 @@ export default function RegisterVisitor() {
     const [title, setTitle] = useState('Mr');
 
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const [country, setCountry] = useState('');
     const [region, setRegion] = useState('');
@@ -29,8 +30,11 @@ export default function RegisterVisitor() {
 
     const onSubmit = async(e: any) => {
         e.preventDefault();
+        setError('');
+        setLoading(true);
         if (first_name === '' || last_name === '' || email === '' || phone === '' || title === '' || country === '' || region === '') {
             setError('Please fill in all required fields');
+            setLoading(false);
         }
         try {
             const config = {
@@ -58,15 +62,19 @@ export default function RegisterVisitor() {
             const data = await res.json();
             if (res.status === 400) {
                 setError(data.message);
+                setLoading(false);
                 return;
             }
             // if (data.capacity === 'full') {
             //     window.location.href = '/booking-full';
             // } 
+            console.log(data);
             if (passType === 'paid') {
+                setLoading(false);
                 router.push(data.url);
                 return;
             }
+            setLoading(false);
             router.push('/exhibit/success/register');
             
         } catch (err) {
@@ -155,7 +163,7 @@ export default function RegisterVisitor() {
                     </select>
                 </div>
                 <div className={style.formSubmit}>
-                    <button type="submit">Register</button>
+                    <button disabled={loading} type="submit">{loading ? "Processing" : "Register"}</button>
                 </div>
             </form>
         </div>
