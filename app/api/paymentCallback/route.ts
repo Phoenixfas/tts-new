@@ -303,7 +303,7 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json('Successful', { status: 200 });
     } catch (error: any) {
-        console.error('Error in callback:', error.message);
+        console.error('Error in callback:', JSON.stringify(error));
         return NextResponse.json('Invalid callback signature', { status: 400 });
     }
 }
