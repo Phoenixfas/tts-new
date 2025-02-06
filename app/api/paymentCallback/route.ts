@@ -26,6 +26,9 @@ export async function POST(request: NextRequest) {
     // //////////////////// Testing Code /////////////////////////
     
     // console.log(signedToken);
+    // log ip of the request
+    // console.log(request.headers.get('x-real-ip'));
+    console.log(request);
 
     // /////////////////////////////////////////////
     
