@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     
     // //////////////////// Testing Code /////////////////////////
     
-    console.log(signedToken);
+    // console.log(signedToken);
 
     // /////////////////////////////////////////////
     
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
             const newTransaction = await Transaction.create(body);
 
             // Generate QR code as a buffer
-            const qrCodeBuffer = await QRCode.toBuffer(body._id, { 
+            const qrCodeBuffer = await QRCode.toBuffer(visitor.id, { 
                 version: 10, 
                 errorCorrectionLevel: 'H', 
                 width: 600, 
