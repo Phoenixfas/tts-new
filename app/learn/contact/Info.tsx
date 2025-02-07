@@ -16,9 +16,9 @@ export default function Info() {
             <MdEmail className='text-7xl text-white' />
             <div className='text-white'>
                 <h1 className='text-lg mokoto'>Email Us:</h1>
-                <p className='text-lg font-light text-[#ccc]'>sales@ttsglobal.tech</p>
-                <p className='text-lg font-light text-[#ccc]'>partnership@ttsglobal.tech</p>
-                <p className='text-lg font-light text-[#ccc]'>conference@ttsglobal.tech</p>
+                <p className='text-lg font-light text-[#ccc]'>sales@ttsethiopia.com</p>
+                <p className='text-lg font-light text-[#ccc]'>partnership@ttsethiopia.com</p>
+                <p className='text-lg font-light text-[#ccc]'>conference@ttsethiopia.com</p>
             </div>
         </div>
         <div className="w-full px-5 sm:px-10 py-7 bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] rounded-2xl flex flex-wrap break-all items-center gap-5">

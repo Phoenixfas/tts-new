@@ -1,7 +1,7 @@
 const conferenceAgenda = [
     {
         day: "1",
-        date: "Thursday, June 19, 2025",
+        date: "Thursday, December 4, 2025",
         sessions: [
           {
             day: "1",
@@ -113,7 +113,7 @@ const conferenceAgenda = [
     },
     {
         day: "2",
-        date: "Friday, June 20, 2025",
+        date: "Friday, December 5, 2025",
         sessions: [
           {
             day: "2",
@@ -205,7 +205,7 @@ const conferenceAgenda = [
     },
     {
         day: "3",
-        date: "Saturday, June 21, 2025",
+        date: "Saturday, December 6, 2025",
         sessions: [
           {
             day: "3",

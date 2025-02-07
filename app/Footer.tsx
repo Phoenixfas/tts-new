@@ -70,11 +70,11 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <h3 className='text-xl mb-3 text-[#78e0f4bb] mokoto'>Get In Touch</h3>
               <p className='font-bold'>Sales Inquiry</p>
-              <Link href={"mailto:sales@ttsglobal.tech"} className='hover:text-[#78e0f4] duration-300'>sales@ttsglobal.tech</Link>
+              <Link href={"mailto:sales@ttsglobal.tech"} className='hover:text-[#78e0f4] duration-300'>sales@ttsethiopia.com</Link>
               <p className='font-bold'>Partnership Inquiry</p>
-              <Link href={"mailto:partnership@ttsglobal.tech"} className='hover:text-[#78e0f4] duration-300'>partnership@ttsglobal.tech</Link>
+              <Link href={"mailto:partnership@ttsglobal.tech"} className='hover:text-[#78e0f4] duration-300'>partnership@ttsethiopia.com</Link>
               <p className='font-bold'>Conference</p>
-              <Link href={"mailto:conference@ttsglobal.tech "} className='hover:text-[#78e0f4] duration-300'>conference@ttsglobal.tech </Link>
+              <Link href={"mailto:conference@ttsglobal.tech "} className='hover:text-[#78e0f4] duration-300'>conference@ttsethiopia.com</Link>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export default function Footer() {
           </form>
         </div>
         <div className="w-full border-t border-[#78e0f4] py-5 text-center text-sm">
-          <p>&copy;2024 All rights reserved. Designed and developed by <Link href={"/"} className='text-[#78e0f4]'>Fasika</Link></p>
+          <p>&copy;2025 All rights reserved. Designed and developed by <Link href={"https://afriopia.com/"} className='text-[#78e0f4]'>Afriopia</Link></p>
         </div>
     </div>
   )

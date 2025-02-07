@@ -11,7 +11,7 @@ export default function HeroContent() {
   return (
     <div className='relative w-full h-screen flex flex-col items-center sm:items-center justify-center px-5 sm:px-10 md:px-20 pt-20 sm:pb-20'>
         <h1 className='max-w-[90%] text-[2rem] leading-[2.5rem] sm:text-5xl md:text-[4rem] md:leading-[5rem] text-center sm:text-center font-bold mb-10 text-white drop-shadow-[0_0_10px_#78e0f4] mokoto'>EXPERIENCE THE BIGGEST <span className='bg-clip-text text-transparent bg-gradient-to-bl from-[#4eaee5] to-[#78e0f4] drop-shadow-[0_0_10px_#050752] mokoto-mark font-normal '>TECH TRADE SHOW</span> LIKE NEVER BEFORE</h1>
-        <p className='text-gray-200 text-sm sm:text-lg mokoto text-center'>Millennium Hall, June 19-21, 2025</p>
+        <p className='text-gray-200 text-sm sm:text-lg mokoto text-center'>Millennium Hall, Dec 4-6, 2025</p>
         {/* <div className="w-full sm:w-fit flex flex-col sm:flex-row gap-2 rounded-md sm:rounded-full p-2 border border-[#78e0f4] bg-[linear-gradient(to_bottom_right,_#050752,_#4EAEE5)] mb-5">
             <div className="py-2 px-5 rounded-md sm:rounded-full border border-[#78e0f4] bg-[#78e0f4] text-[#050752] hover:text-[#78e0f4] hover:bg-[#050752] duration-300">Explore All</div>
             <Link href={"/attend/exhibitor-list"} className="py-2 px-5 rounded-md sm:rounded-full text-[#fff] hover:text-[#050752] hover:bg-[#78e0f4] duration-300">Exhibitors</Link>
